@@ -12,8 +12,11 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'coollabsio', // Usually your GitHub org/user name.
-  projectName: 'documentation', // Usually your repo name.
+  organizationName: 'coollabsio',
+  projectName: 'documentation',
+  scripts: [
+    { src: 'https://analytics.coollabs.io/js/plausible.js', defer: true, 'data-domain': 'docs.coollabs.io' },
+  ],
   presets: [
     [
       'classic',
@@ -69,10 +72,10 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
-          
+
         ],
       },
-      
+
       footer: {
         style: 'light',
         links: [
