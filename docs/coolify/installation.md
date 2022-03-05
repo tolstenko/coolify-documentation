@@ -7,7 +7,7 @@ sidebar_position: 1
 ## Minimum Server Requirements
 
 - 2 CPUs
-- 1 GB memory
+- 2 GBs memory
 - 30+ GB of storage for Docker images.
 
 
