@@ -6,12 +6,10 @@ sidebar_position: 5
 
 Defines where to deploy your application, database or service to. 
 
-## Supported Destinations
+## Types
 - Local Docker Engine
-
-But more will come:
-- Remote Docker Engine
-- Kubernetes
+- Remote Docker Engine (WIP)
+- Kubernetes (WIP)
 
 ## Local Docker Engine
 There are 2 main configuration for Local Docker Engines.
@@ -19,7 +17,7 @@ There are 2 main configuration for Local Docker Engines.
 2. **Network** - Used to create docker networks within the defined Docker Engine.
 
    
-> Networks are useful to create network separation from different applications. Applications, databases and services within the same network could communicate with eachother and with the internet - databases by default are not public.
+> Networks are useful to create **network separation from different applications**. Applications, databases and services within the same network could communicate with eachother and with the internet - *databases by default are not public*.
 
 3. **Coolify Proxy** - This is a special proxy based on [HAProxy](https://haproxy.com/), that is configured automatically by Coolify. 
 

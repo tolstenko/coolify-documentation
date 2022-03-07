@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Git Sources
 
-You can have infinite number of Git sources defined in your instance. 
+Git Sources defines where your application's source code is. 
 
 These sources are used to:
 - Setup helper apps (such as GitHub App, GitLab App) in your Git providers,
@@ -12,11 +12,12 @@ These sources are used to:
 - Setup webhooks for automated deployments,
 - etc..
 
-## Supported Git Sources
+## Types
 Currently hosted or self-hosted version of the following Git providers are supported.
 - GitHub
 - GitLab
+- Bitbucket (WIP)
+- Gitea (WIP)
 
-But more will come:
-- Bitbucket
-- Gitea
+## Features
+- All commits are autodeployed through webhooks.

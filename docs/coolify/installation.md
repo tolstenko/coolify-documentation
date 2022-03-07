@@ -4,14 +4,16 @@ sidebar_position: 1
 
 # Installation
 
-## Minimum Server Requirements
+## Minimum Requirements for Coolify
+
+Coolify builds docker images for applications, so it is a CPU intensive process. Other resources are depending on what you would like to host.
 
 - 2 CPUs
 - 2 GBs memory
 - 30+ GB of storage for Docker images.
 
 
-## Currently Supported Operating Systems
+## Supported Operating Systems
 
 - Ubuntu
 
@@ -43,7 +45,7 @@ COOLIFY_APP_ID=
 COOLIFY_SECRET_KEY=
 COOLIFY_DATABASE_URL=file:../db/prod.db
 COOLIFY_SENTRY_DSN=https://9e7a74326f29422584d2d0bebdc8b7d3@o1082494.ingest.sentry.io/6091062
-COOLIFY_IS_ON="docker"
+COOLIFY_IS_ON=docker
 ```
 
 | Variable             | Explanation                                                                 |
