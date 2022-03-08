@@ -12,10 +12,7 @@ Coolify builds docker images for applications, so it is a CPU intensive process.
 - 2 GBs memory
 - 30+ GB of storage for Docker images.
 
-
-## Supported Operating Systems
-
-- Ubuntu
+Currently only `Ubuntu` servers are supported. If you would like to have other, please consider [open an issue on GitHub](https://github.com/coollabsio/coolify/issues/new).
 
 # Ways To Install
 :::tip Recommended way

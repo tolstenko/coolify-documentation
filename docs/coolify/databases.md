@@ -4,9 +4,7 @@ sidebar_position: 7
 
 # Databases
 
-You can host several types of databases with Coolify. 
-
-Currently supported types:
+You can easily host one-click databases with Coolify. These databases includes:
 
 - MongoDB
 - MySQL
@@ -14,9 +12,8 @@ Currently supported types:
 - Redis
 - CouchDB
 
+## Features
 
-### Features
-
-#### Set it public
+### Set it public
 You can make each database to be reachable over the internet. 
 > Useful for backup and restore.

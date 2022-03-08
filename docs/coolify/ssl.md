@@ -4,14 +4,12 @@ sidebar_position: 9
 
 # SSL 
 
-All certificates are automatically generated, in case you are using Coolify Proxy. 
+## Let's Encrypt
+All certificates are automatically generated with [Let's Encrypt](https://letsencrypt.org/) - in case if you are using Coolify Proxy. 
 
-Coolify uses [Let's Encrypt](https://letsencrypt.org/) to generate these certs.
-
-## http vs https
-By default, the protocol is based on what you set for FQDN. 
+A certificate is requested in case `https` is defined in the FQDN for a resource.
 
 ## www vs non-www
-By default, certificates are only generated for the configured FQDN. 
+Certificates are only generated for the defined FQDN. That means, if you define a non-www FQDN, then only it will have a certificate.
 
-If you would like to generate both SSL certificates, there is an option called `Generate SSL for www and non-www?` for each type of supported applications and services.
+If you would like to generate an SSL certificates for both, there is an option called `Generate SSL for www and non-www?` for applications and services.
