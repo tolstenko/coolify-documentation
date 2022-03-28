@@ -21,10 +21,23 @@ Automated method recommended for first time users, or if you want Coolify to han
 
 :::
 ## Automated
+It will still ask questions and does not overwrite existing configuration, like for Docker Engine.
+
+:::tip
+You can use this to reinstall Coolify if something happens to it. Existing configuration will be used.
+:::
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://get.coollabs.io/coolify/install.sh)"
 ```
+
+## Scripted fully automated
+No questions asked. It sets everything required.
+
+```bash
+curl -fsSL https://get.coollabs.io/coolify/install.sh | /bin/bash -s -- -y
+```
+
 
 You can always check the source code of this script [here](https://github.com/coollabsio/get.coollabs.io/blob/main/static/coolify/install.sh).
 

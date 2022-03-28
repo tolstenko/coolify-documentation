@@ -6,15 +6,21 @@ sidebar_position: 8
 
 You can easily host one-click services with Coolify. These services includes:
 
+- [WordPress](https://wordpress.org)
+- [Ghost](https://ghost.org)
 - [Plausible Analytics](https://plausible.io)
 - [NocoDB](https://nocodb.com)
-- [MinIO](https://min.io)
 - [VSCode Server](https://github.com/cdr/code-server)
-- [WordPress](https://wordpress.org)
+- [MinIO](https://min.io)
 - [VaultWarden](https://github.com/dani-garcia/vaultwarden)
-- [LanguageTool](https://languagetool.org/)
+- [LanguageTool](https://languagetool.org)
+- [n8n](https://n8n.io)
+- [Uptime Kuma](https://github.com/louislam/uptime-kuma)
 
 Some applications could take several minutes to start up.
+
+## Requirements
+Each application requires a specific amount of CPU/memory/storage. If you would like to host more, have a larger server, not a $5 one, please.
 
 ## Persistency
 
