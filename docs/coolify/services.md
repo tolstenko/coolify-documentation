@@ -4,7 +4,11 @@ sidebar_position: 8
 
 # Services
 
-You can easily host one-click services with Coolify. These services includes:
+Services are popular open-sourced and self-hostable applications, provided as a service for you.
+
+You can suggest new services by [opening an issue on GitHub](https://github.com/coollabsio/coolify/issues/new).
+
+## Types of services supported
 
 - [WordPress](https://wordpress.org)
 - [Ghost](https://ghost.org)
@@ -16,15 +20,16 @@ You can easily host one-click services with Coolify. These services includes:
 - [LanguageTool](https://languagetool.org)
 - [n8n](https://n8n.io)
 - [Uptime Kuma](https://github.com/louislam/uptime-kuma)
+- [Meilisearch](https://www.meilisearch.com)
 
-Some applications could take several minutes to start up.
+Some services could take several minutes to start up.
 
 ## Requirements
-Each application requires a specific amount of CPU/memory/storage. If you would like to host more, have a larger server, not a $5 one, please.
+Each service requires a specific amount of CPU / memory / storage. Choose your services based on their requirements.
 
 ## Persistency
 
-All data are persistent. That means, if you stop a service, all your data persist on a Docker Volume. If you stop/start a service, you will keep your data as-is.
+All data are persistent. That means, if you stop a service, all your data persist on a Docker Volume. If you start it again, you will keep your data as-is.
 
 ## Secrets
-There are some predefined secrets on the frontend, that are generated automatically (like passwords, users.) or you can fill manually. If you need any futher environment variable, you can define them in the secrets tab.
+There are some predefined secrets that are necessary for the service to start and generated automatically (like passwords, users, urls), but you can override them anytime, in the `secrets` menu.

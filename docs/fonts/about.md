@@ -23,7 +23,7 @@ I'm using [BunnyCDN](https://bunny.net/) to serve all the fonts, close to your u
 - Hosted on a bare metal server, not on a cloud provider.   
 
 ## Who's idea was this?
-It was [mine](https://twitter.com/andrasbacsai). I'm building it with my community over [Twitter](https://twitter.com/andrasbacsai)/[Discord](https://discord.gg/6rDM4fkymF)/[Github](https://github.com/coollabsio/coolify). If you are interested, come join and let's have a talk.
+It was [mine](https://twitter.com/andrasbacsai). I'm building it with my community over [Twitter](https://twitter.com/andrasbacsai)/[Discord](https://discord.gg/6rDM4fkymF)/[Github](https://github.com/coollabsio/coolify). If you are interested, come join and let's have a talk. :)
 
 ## Product Hunt
 [![Product Hunt](https://ph-static.imgix.net/ph-favicon.ico?auto=format&auto=compress)](https://www.producthunt.com/posts/privacy-focused-google-fonts-alternative?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-privacy-focused-google-fonts-alternative)

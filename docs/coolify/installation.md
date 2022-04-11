@@ -6,11 +6,13 @@ sidebar_position: 1
 
 ## Minimum Requirements for Coolify
 
-Coolify builds docker images for applications, so it is a CPU intensive process. Other resources are depending on what you would like to host.
+Coolify builds images locally for applications, which is a CPU intensive process. 
 
 - 2 CPUs
 - 2 GBs memory
-- 30+ GB of storage for Docker images.
+- 30+ GB of storage for the images.
+
+Other resources depends on the resource requirements. For example, Wordpress needs different CPU/memory than a Redis database.
 
 Currently only `Ubuntu` servers are supported. If you would like to have other, please consider [open an issue on GitHub](https://github.com/coollabsio/coolify/issues/new).
 
@@ -21,7 +23,7 @@ Automated method recommended for first time users, or if you want Coolify to han
 
 :::
 ## Automated
-It will still ask questions and does not overwrite existing configuration, like for Docker Engine.
+It will still ask questions and does not overwrite existing configurations.
 
 :::tip
 You can use this to reinstall Coolify if something happens to it. Existing configuration will be used.
@@ -37,7 +39,6 @@ No questions asked. It sets everything required.
 ```bash
 curl -fsSL https://get.coollabs.io/coolify/install.sh | /bin/bash -s -- -y
 ```
-
 
 You can always check the source code of this script [here](https://github.com/coollabsio/get.coollabs.io/blob/main/static/coolify/install.sh).
 
@@ -56,12 +57,25 @@ COOLIFY_SECRET_KEY=
 COOLIFY_DATABASE_URL=file:../db/prod.db
 COOLIFY_SENTRY_DSN=https://9e7a74326f29422584d2d0bebdc8b7d3@o1082494.ingest.sentry.io/6091062
 COOLIFY_IS_ON=docker
+COOLIFY_WHITE_LABELED=false
 ```
 
-| Variable             | Explanation                                                                 |
-| -------------------- | --------------------------------------------------------------------------- |
-| COOLIFY_APP_ID       | A random UUID. Used to differentiate between installed instances.           |
-| COOLIFY_SECRET_KEY   | Used to encrypt all kind of private data. **Must be `32` characters long**. |
-| COOLIFY_DATABASE_URL | SQLite database URL. **Must be under `../db`** .                            |
-| COOLIFY_SENTRY_DSN   | Sentry error report DSN. Not mandatory, but preferred.                      |
-| COOLIFY_IS_ON        | Where Coolify is deployed to. Currently only **`docker`** supported.        |
+| Variable              | Explanation                                                                              |
+| --------------------- | ---------------------------------------------------------------------------------------- |
+| COOLIFY_APP_ID        | A random UUID. Used to differentiate between installed instances.                        |
+| COOLIFY_SECRET_KEY    | Used to encrypt all kind of private data. **Must be `32` characters long**.              |
+| COOLIFY_DATABASE_URL  | SQLite database URL. **Must be under `../db`** .                                         |
+| COOLIFY_SENTRY_DSN    | Sentry error report DSN. Not mandatory.                                                  |
+| COOLIFY_IS_ON         | Where Coolify is deployed to. Currently only **`docker`** supported.                     |
+| COOLIFY_WHITE_LABELED | It removes the "branding" of your Coolify instance. Please contact me before using this. |
+
+
+### Start Coolify
+
+```sh
+docker run -tid --env-file .env -v /var/run/docker.sock:/var/run/docker.sock -v coolify-db-sqlite coollabsio/coolify:latest /bin/sh -c "env | grep COOLIFY > .env && docker compose up -d --force-recreate"
+```
+
+Why is this complicated command instead of just a `docker compose up?`
+
+Coolify needs to be started inside docker's namespace. In short, it is needed for the auto-update process.
