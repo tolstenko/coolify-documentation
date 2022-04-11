@@ -18,8 +18,8 @@ All supported version found [here](https://github.com/coollabsio/coolify/blob/ma
 ## Features
 
 ### Change default random passwords
-You can change all your passwords from the UI. Database should be run to do so.
+You can change all your passwords from the UI (the database should run).
 
 ### Set it public
 You can make your database. Default: `off`
-> Useful for backup and restore, or to reach your database outside from your server.
+> Useful for backup and restore, or to reach your database outside of your server.

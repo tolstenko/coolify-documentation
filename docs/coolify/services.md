@@ -4,7 +4,7 @@ sidebar_position: 8
 
 # Services
 
-Services are popular open-sourced and self-hostable applications, provided as a service for you.
+Services are popular open-sourced and self-hostable applications provided as a service for you.
 
 You can suggest new services by [opening an issue on GitHub](https://github.com/coollabsio/coolify/issues/new).
 
@@ -25,11 +25,11 @@ You can suggest new services by [opening an issue on GitHub](https://github.com/
 Some services could take several minutes to start up.
 
 ## Requirements
-Each service requires a specific amount of CPU / memory / storage. Choose your services based on their requirements.
+Each service requires a specific amount of CPU / memory/storage. Choose your services based on their requirements.
 
 ## Persistency
 
-All data are persistent. That means, if you stop a service, all your data persist on a Docker Volume. If you start it again, you will keep your data as-is.
+All data are persistent. If you stop a service, all your data persist on a Docker Volume. If you start it again, you will keep your data as-is.
 
 ## Secrets
-There are some predefined secrets that are necessary for the service to start and generated automatically (like passwords, users, urls), but you can override them anytime, in the `secrets` menu.
+Some predefined secrets are necessary for the service to start and generated automatically (like passwords, users, URLs), but you can override them in the `secrets` menu.
