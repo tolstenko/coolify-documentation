@@ -16,31 +16,33 @@ Other resources depend on the resource requirements. For example, WordPress need
 
 Currently, only `Ubuntu` servers are supported. If you would like to have other, please consider [open an issue on GitHub](https://github.com/coollabsio/coolify/issues/new).
 
-# Ways To Install
-:::tip Recommended way
+## Recommended ways
 
-The automated method is recommended for first-time users or if you want Coolify to handle everything for you.
-
-:::
-## Automated
-It will still ask questions and does not overwrite existing configurations.
-
-:::tip
-You can use this to reinstall Coolify if something happens to it. The existing configuration will be used.
-:::
+### Automated
+Questions asked, but it is not that complicated.
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://get.coollabs.io/coolify/install.sh)"
+wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./install.sh
 ```
 
-## Scripted fully automated
-No questions asked. It sets everything required.
+### Scripted / fully automated
+No questions asked. Could be used to install Coolify programmatically.
 
+:::tip Recommended way
+If you want Coolify to handle everything for you.
+:::
 ```bash
-curl -fsSL https://get.coollabs.io/coolify/install.sh | /bin/bash -s -- -y
+wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./install.sh -f
 ```
 
 You can always check the source code of this script [here](https://github.com/coollabsio/get.coollabs.io/blob/main/static/coolify/install.sh).
+
+### Options
+
+    -d, --debug         Show debug logs during installation.
+    -f, --force         Force installation, no questions asked.
+    --do-not-track      Opt-out of telemetry. You can set export DO_NOT_TRACK=1 in advance.
+    --white-labeled     Install white labeled version. Contact me before using it (https://docs.coollabs.io/contact)".
 
 ## Manually
 
@@ -79,3 +81,21 @@ docker run -tid --env-file .env -v /var/run/docker.sock:/var/run/docker.sock -v 
 Why is this complicated command instead of just a `docker compose up?`
 
 Coolify needs to be started inside docker's namespace. In short, it is necessary for the auto-update process.
+
+## Change configuration of a running instance
+
+You can always execute the installation script with different options to reconfigure Coolify.
+
+For example: 
+- If you want to opt-out of tracking, execute the install script with `--do-not-track`.
+- If you want to use the white-labeled version, execute the install script with `--white-labeled`.
+
+:::tip
+  Configurations are not preserved. If you change a configuration, you need to add all options that you would like to use. So if you installed Coolify with `--do-no-track` before, and you want to also use `--white-labeled` option, you need re-install Coolify with `--do-not-track` and `--white-labeled`.
+:::
+
+## Restart Coolify
+
+```bash
+wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./install.sh -f
+```
