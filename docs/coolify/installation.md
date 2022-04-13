@@ -96,6 +96,8 @@ For example:
 
 ## Restart Coolify
 
+If your Coolify instance stops working, you can restart it with the following command.
+
 ```bash
 wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./install.sh -f
 ```
