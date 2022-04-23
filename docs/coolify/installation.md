@@ -29,7 +29,7 @@ wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./in
 No questions asked. Could be used to install Coolify programmatically.
 
 :::tip Recommended way
-If you want Coolify to handle everything for you.
+If you want, Coolify to handle everything for you.
 :::
 ```bash
 wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./install.sh -f
@@ -39,10 +39,15 @@ You can always check the source code of this script [here](https://github.com/co
 
 ### Options
 
-    -d, --debug         Show debug logs during installation.
-    -f, --force         Force installation, no questions asked.
-    --do-not-track      Opt-out of telemetry. You can set export DO_NOT_TRACK=1 in advance.
-    --white-labeled     Install white labeled version. Contact me before using it (https://docs.coollabs.io/contact)".
+    -h, --help                  Show this help menu.
+    -d, --debug                 Show debug logs during installation.
+    -f, --force                 Force installation, no questions asked.
+
+    -n, --do-not-track          Opt-out of telemetry. You can set export DO_NOT_TRACK=1 in advance.
+
+    -w, --white-labeled         Install white-labeled version. Contact me before using it (https://docs.coollabs.io/contact)
+    -i, --white-labeled-logo    Add your remote logo for your white-labeled version. Should be a http/https URL.
+
 
 ## Manually
 
@@ -60,6 +65,7 @@ COOLIFY_DATABASE_URL=file:../db/prod.db
 COOLIFY_SENTRY_DSN=https://9e7a74326f29422584d2d0bebdc8b7d3@o1082494.ingest.sentry.io/6091062
 COOLIFY_IS_ON=docker
 COOLIFY_WHITE_LABELED=false
+COOLIFY_WHITE_LABELED_ICON=
 ```
 
 | Variable              | Explanation                                                                              |
@@ -70,6 +76,7 @@ COOLIFY_WHITE_LABELED=false
 | COOLIFY_SENTRY_DSN    | Sentry error report DSN. Not mandatory.                                                  |
 | COOLIFY_IS_ON         | Where Coolify is deployed to. Currently, only **`docker`** is supported.                     |
 | COOLIFY_WHITE_LABELED | It removes the "branding" of your Coolify instance. Please get in touch with me before using this. |
+| COOLIFY_WHITE_LABELED_ICON | A remote icon to be replaced on the login/registration page |
 
 
 ### Start Coolify
@@ -90,13 +97,17 @@ For example:
 - If you want to opt-out of tracking, execute the install script with `--do-not-track`.
 - If you want to use the white-labeled version, execute the install script with `--white-labeled`.
 
-:::tip
-  Configurations are not preserved. If you change a configuration, you need to add all options that you would like to use. So if you installed Coolify with `--do-no-track` before, and you want to also use `--white-labeled` option, you need re-install Coolify with `--do-not-track` and `--white-labeled`.
+:::warning
+  Some configurations are not preserved if you would like to change them on an already configured instance. 
+  
+  These options are the following: `--white-labeled`, `--do-no-track`, `--white-labeled-icon`.
+  
+  So if you installed Coolify with `--do-no-track` before, and you want to also use `--white-labeled` option, you need execute the install script with `--do-not-track` and `--white-labeled`!
 :::
 
 ## Restart Coolify
 
-If your Coolify instance stops working, you can restart it with the following command.
+If your Coolify instance stops working (eg: OOM), you can restart it with the following command.
 
 ```bash
 wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./install.sh -f

@@ -32,6 +32,7 @@ Build packs have predefined configurations and build processes, especially for f
 - NestJS
 - Rust
 - Docker
+- Deno **(new)**
 
 To choose the best-fitting build pack, Coolify scans your repository to guess it.
 
@@ -88,6 +89,10 @@ Rust build pack leverages `cargo-chef` to create a cache layer. The following bu
 Base docker image: [python:3-alpine](https://hub.docker.com/_/python)
 
 You can choose between Gunicorn, uWSGI, and no WSGI deployments. 
+
+
+### Deno
+Base docker image: [denoland/deno:latest](https://registry.hub.docker.com/r/denoland/deno)
 
 ## Secrets
 Secrets are environment variables that should be set during build or runtime.

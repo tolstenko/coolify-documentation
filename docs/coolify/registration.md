@@ -11,4 +11,15 @@ After installation, the first registered user will be the `root/admin` user of y
 Every other user won't access system-wide configurations and only see their team's resources.
 
 ## Type of authentication
-Currently, only email/password registration is supported.
+Currently, `email/password` registration is supported.
+
+
+## Reset Password
+
+Admins can reset the passwords of team members in the `Settings` menu. If a password reset is requested, the user has 10 minutes to do it. 
+
+Password reset is done through the login process. The user's new password will be the one used on the login form. 
+
+After 10 minutes, the old password can be used to log in, and the password reset process is stopped. 
+
+(This will be improved with email/link mechanisms)
