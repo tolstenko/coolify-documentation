@@ -31,6 +31,7 @@ No questions asked. Could be used to install Coolify programmatically.
 :::tip Recommended way
 If you want, Coolify to handle everything for you.
 :::
+
 ```bash
 wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./install.sh -f
 ```
@@ -68,6 +69,7 @@ COOLIFY_SENTRY_DSN=https://9e7a74326f29422584d2d0bebdc8b7d3@o1082494.ingest.sent
 COOLIFY_IS_ON=docker
 COOLIFY_WHITE_LABELED=false
 COOLIFY_WHITE_LABELED_ICON=
+COOLIFY_AUTO_UPDATE=false
 ```
 
 | Variable              | Explanation                                                                              |
@@ -78,7 +80,8 @@ COOLIFY_WHITE_LABELED_ICON=
 | COOLIFY_SENTRY_DSN    | Sentry error report DSN. Not mandatory.                                                  |
 | COOLIFY_IS_ON         | Where Coolify is deployed to. Currently, only **`docker`** is supported.                     |
 | COOLIFY_WHITE_LABELED | It removes the "branding" of your Coolify instance. Please get in touch with me before using this. |
-| COOLIFY_WHITE_LABELED_ICON | A remote icon to be replaced on the login/registration page |
+| COOLIFY_WHITE_LABELED_ICON | A remote icon to be replaced on the login/registration page. |
+| COOLIFY_AUTO_UPDATE | It updates your Coolify instance automatically behind the scenes. |
 
 
 ### Start Coolify

@@ -10,6 +10,9 @@ It's an alternative software to [Heroku](https://www.heroku.com/) and [Netlify](
 
 #### [Live demo](https://demo.coolify.io/)
 
+## Feedback
+If you have a new service / build pack you would like to add, raise an idea [here](https://feedback.coolify.io/) to get feedback from the community!
+
 ## Who is it for?
 1. Hobbyists to quickly run your applications and ship that MVP!
 2. Companies and teams who would like to host their resources in-house.

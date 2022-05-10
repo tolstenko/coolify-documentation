@@ -4,7 +4,11 @@ sidebar_position: 1
 
 # Services
 
-You can easily host one-click services with Coolify. These services includes:
+Services are popular open-sourced and self-hostable applications provided as a service for you.
+
+You can suggest new services by [opening an issue on GitHub](https://github.com/coollabsio/coolify/issues/new).
+
+## Types of services supported
 
 - [WordPress](./wordpress)
 - [Ghost](https://ghost.org)
@@ -25,16 +29,8 @@ You can easily host one-click services with Coolify. These services includes:
 Some applications could take several minutes to start up.
 :::
 
-
-:::warning
-Each application requires a specific amount of CPU/memory/storage. If you would like to host more, have a larger server, not a $5 one, please.
-:::
-
-## Generate SSL for www and non-www?
-It will generate certificates for both www and non-www.
-You need to have both DNS entries set in advance.
-
-Useful if you expect to have visitors on both.
+## Requirements
+Each service requires a specific amount of CPU / memory/storage. Choose your services based on their requirements.
 
 ## Exposed Port
 You can expose your application to a port on the host system.

@@ -61,7 +61,18 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
+          {
+            type: 'doc',
+            docId: 'contact',
+            position: 'left',
+            label: 'Contact',
+          },
           // {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            href: 'https://feedback.coolify.io',
+            label: 'Feedback',
+            position: 'right',
+          },
           {
             href: 'https://opencollective.com/coollabsio',
             label: 'Sponsorship',
