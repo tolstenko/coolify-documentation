@@ -17,22 +17,19 @@ Build packs have predefined configurations and build processes, especially for f
 
 > These build processes do not handle all the use-cases, just the most commonly used ones. Consider using the `Docker` build pack if you need a custom build process.
 
-- Static
+- Static sites
 - NodeJS
-- PHP
-- Svelte
 - VueJS
 - NuxtJS
-- Gatsby
-- Astro
-- Eleventy
-- React
-- Preact
 - NextJS
-- NestJS
+- React/Preact
+- Gatsby
+- Svelte
+- PHP
+- Laravel
 - Rust
 - Docker
-- Deno **(new)**
+- Deno
 
 To choose the best-fitting build pack, Coolify scans your repository to guess it.
 
@@ -79,17 +76,28 @@ Composer will install all dependencies if `composer.json` is detected.
 
 You can customize this image with environment variables, see the [docs](https://dockerfile.readthedocs.io/en/latest/content/DockerImages/dockerfiles/php-nginx.html).
 
+### Laravel
+Base docker image: [webdevops/php-apache:8.0-alpine](https://hub.docker.com/r/webdevops/php-apache/)
+
+You can customize this image with environment variables. See the [docs](https://dockerfile.readthedocs.io/en/latest/content/DockerImages/dockerfiles/php-apache.html).
+
+### Docker
+Docker is another special build pack. You can use your own Dockerfile to build your applications. 
+
+This helps you to deploy custom applications, that does not have a build pack, yet.
+
+Everything that runs by a single Dockerfile could be deployed with Coolify!
+
 ### Rust
 Base docker image: [rust:latest](https://hub.docker.com/_/rust)
 
 Rust build pack leverages `cargo-chef` to create a cache layer. The following builds will be significantly faster after the first build is successfully done.
 
-
 ### Python
-Base docker image: [python:3-alpine](https://hub.docker.com/_/python)
+Base docker image: [python:3.10-alpine](https://hub.docker.com/_/python)
 
-You can choose between Gunicorn, uWSGI, and no WSGI deployments. 
-
+## Destination
+Defines where to build and deploy your application, which [destination](./destinations.md) should be used.
 
 ### Deno
 Base docker image: [denoland/deno:latest](https://registry.hub.docker.com/r/denoland/deno)
@@ -97,10 +105,16 @@ Base docker image: [denoland/deno:latest](https://registry.hub.docker.com/r/deno
 ## Secrets
 Secrets are environment variables that should be set during build or runtime.
 
+## Exposed Port
+You can expose your application to a port on the host system.
+
+> Useful if you would like to use your own reverse proxy or tunnel and also in development mode of Coolify. 
+
 ## Features
 
-## Enable Automatic Deployment
-Enable automatic deployment through webhooks. Default: `on`
+### Enable Automatic Deployment
+Enable automatic deployment through webhooks. Enabled by default.
+> Useful to turn off if you would like to deploy your applications manually, not on every commit.
 
 ### Enable MR/PR Previews
 Automatically builds `Merge Request` and `Pull Requests`. Default: `off`

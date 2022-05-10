@@ -6,12 +6,14 @@ sidebar_position: 7
 
 Quickly deploy databases to your applications.
 
-## Types of databases supported
-- MongoDB
-- MySQL
-- PostgreSQL
-- Redis
-- CouchDB
+- [MongoDB](https://mongodb.com) - [Base image](https://hub.docker.com/r/bitnami/mongodb/)
+- [MariaDB](https://mariadb.org/) - [Base image](https://hub.docker.com/r/bitnami/mariadb/)
+- [MySQL](https://www.mysql.com/) - [Base image](https://hub.docker.com/r/bitnami/mysql/)
+- [PostgreSQL](https://www.postgresql.org/) - [Base image](https://hub.docker.com/r/bitnami/postgresql/)
+- [CouchDB](https://couchdb.apache.org/) - [Base image](https://hub.docker.com/r/bitnami/redis/)
+- [Redis](https://redis.io/) - [Base image](https://hub.docker.com/r/bitnami/couchdb/)
+
+To see all the features you could set with envinronment variable, check the base image links!
 
 All supported version found [here](https://github.com/coollabsio/coolify/blob/main/src/lib/components/common.ts) at the `supportedDatabaseTypesAndVersions` function.
 

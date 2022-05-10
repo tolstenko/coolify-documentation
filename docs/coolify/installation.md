@@ -35,19 +35,21 @@ If you want, Coolify to handle everything for you.
 wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./install.sh -f
 ```
 
-You can always check the source code of this script [here](https://github.com/coollabsio/get.coollabs.io/blob/main/static/coolify/install.sh).
-
-### Options
-
+## Options
+```sh
+Usage: install.sh [options...]
     -h, --help                  Show this help menu.
+    -v, --version               Show script version.
     -d, --debug                 Show debug logs during installation.
     -f, --force                 Force installation, no questions asked.
 
     -n, --do-not-track          Opt-out of telemetry. You can set export DO_NOT_TRACK=1 in advance.
 
+    -a, --auto-update           Warning: TESTING PHASE, DO NOT USE IT YET! Enable auto update feature of Coolify.
+
     -w, --white-labeled         Install white-labeled version. Contact me before using it (https://docs.coollabs.io/contact)
     -i, --white-labeled-logo    Add your remote logo for your white-labeled version. Should be a http/https URL.
-
+```
 
 ## Manually
 
