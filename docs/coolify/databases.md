@@ -10,8 +10,8 @@ Quickly deploy databases to your applications.
 - [MariaDB](https://mariadb.org/) - [Base image](https://hub.docker.com/r/bitnami/mariadb/)
 - [MySQL](https://www.mysql.com/) - [Base image](https://hub.docker.com/r/bitnami/mysql/)
 - [PostgreSQL](https://www.postgresql.org/) - [Base image](https://hub.docker.com/r/bitnami/postgresql/)
-- [CouchDB](https://couchdb.apache.org/) - [Base image](https://hub.docker.com/r/bitnami/redis/)
-- [Redis](https://redis.io/) - [Base image](https://hub.docker.com/r/bitnami/couchdb/)
+- [CouchDB](https://couchdb.apache.org/) - [Base image](https://hub.docker.com/r/bitnami/couchdb/)
+- [Redis](https://redis.io/) - [Base image](https://hub.docker.com/r/bitnami/redis/)
 
 To see all the features you could set with envinronment variable, check the base image links!
 
