@@ -23,5 +23,5 @@ All supported version found [here](https://github.com/coollabsio/coolify/blob/ma
 You can change all your passwords from the UI (the database should run).
 
 ### Set it public
-You can make your database. Default: `off`
+You can make your database public. Default: `off`
 > Useful for backup and restore, or to reach your database outside of your server.
