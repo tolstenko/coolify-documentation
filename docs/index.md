@@ -1,8 +1,3 @@
----
-slug: /
-sidebar_position: 1
----
-
 # Welcome
 
 [coolLabs](https://coollabs.io) is an umbrella name for **open-source**, **self-hostable** and **privacy-focused** applications and services.
