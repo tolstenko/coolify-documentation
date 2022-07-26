@@ -4,6 +4,7 @@ export default defineConfig({
   title: 'coolLabs',
   description: 'Documentation for all applications & services of coolLabs',
   themeConfig: {
+    lastUpdated: true,
     footer: {
       message: 'Released under the Apache License.',
       copyright: 'Copyright © 2019-present Andras Bacsai'
