@@ -100,7 +100,6 @@ function sidebarCoolify() {
     {
       text: 'Coolify',
       items: [
-        { text: 'Introduction', link: '/coolify/' },
         { text: 'Installation', link: '/coolify/installation' },
         { text: 'Git Sources', link: '/coolify/sources' },
         { text: 'Destinations', link: '/coolify/destinations' },
