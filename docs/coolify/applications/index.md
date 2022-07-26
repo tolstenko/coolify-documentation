@@ -15,20 +15,20 @@ Build packs have predefined configurations and build processes, especially for f
 
 > These build processes do not handle all the use-cases, just the most commonly used ones. Consider using the `Docker` build pack if you need a custom build process.
 
-- [Static sites](./static.md)
-- [NodeJS](./nodejs.md)
-- [VueJS](./vuejs.md)
-- [NuxtJS](./nuxtjs.md)
-- [NextJS](./nextjs.md)
-- [React/Preact](./react.md)
-- [Gatsby](./gatsby.md)
-- [Svelte](./svelte.md)
-- [PHP](./php.md)
-- [Python](./python.md)
-- [Laravel](./laravel.md)
-- [Rust](./rust.md)
-- [Docker](./docker.md)
-- [Deno](./deno.md)
+- [Static sites](./static)
+- [NodeJS](./nodejs)
+- [VueJS](./vuejs)
+- [NuxtJS](./nuxtjs)
+- [NextJS](./nextjs)
+- [React/Preact](./react-preact)
+- [Gatsby](./gatsby)
+- [Svelte](./svelte)
+- [PHP](./php)
+- [Python](./python)
+- [Laravel](./laravel)
+- [Rust](./rust)
+- [Docker](./docker)
+- [Deno](./deno)
 
 To choose the best-fitting build pack, Coolify scans your repository to guess it.
 
