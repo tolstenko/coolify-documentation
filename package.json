@@ -8,7 +8,7 @@
   },
   "repository": "https://github.com/coollabsio/documentation.git",
   "author": "Andras Bacsai <andras.bacsai@gmail.com>",
-  "license": "MIT",
+  "license": "Apache",
   "devDependencies": {
     "vitepress": "1.0.0-alpha.4",
     "vue": "3.2.37"

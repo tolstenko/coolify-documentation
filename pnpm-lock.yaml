@@ -1,8 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
-  vitepress: ^1.0.0-alpha.4
-  vue: ^3.2.37
+  vitepress: 1.0.0-alpha.4
+  vue: 3.2.37
 
 devDependencies:
   vitepress: 1.0.0-alpha.4
@@ -21,6 +21,9 @@ packages:
     peerDependencies:
       '@algolia/client-search': ^4.9.1
       algoliasearch: ^4.9.1
+    peerDependenciesMeta:
+      '@algolia/client-search':
+        optional: true
     dependencies:
       '@algolia/autocomplete-shared': 1.7.1
       algoliasearch: 4.14.1
@@ -163,6 +166,13 @@ packages:
       '@types/react': '>= 16.8.0 < 19.0.0'
       react: '>= 16.8.0 < 19.0.0'
       react-dom: '>= 16.8.0 < 19.0.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
     dependencies:
       '@algolia/autocomplete-core': 1.7.1
       '@algolia/autocomplete-preset-algolia': 1.7.1_algoliasearch@4.14.1
