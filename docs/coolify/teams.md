@@ -1,7 +1,3 @@
----
-sidebar_position: 3
----
-
 # Teams
 Each registered user has its team automatically. Each team only has access to its own resources. 
 

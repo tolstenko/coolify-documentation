@@ -1,10 +1,6 @@
----
-sidebar_position: 1
----
-
 # Installation
 
-## Minimum Requirements for Coolify
+## Minimum Requirements
 
 Coolify builds images locally for applications, which is a CPU-intensive process. 
 
@@ -117,3 +113,38 @@ If your Coolify instance stops working (eg: OOM), you can restart it with the fo
 ```bash
 wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./install.sh -f
 ```
+
+## Registration
+
+After installation, the first registered user will be the `root/admin` user of your Coolify instance. It will see/change all resources deployed, access system-wide configurations, one-click update process, etc.
+
+> By default, **registration is disabled** afterward. You can enable registration in the `Settings` menu.
+
+Every other user won't access system-wide configurations and only see their team's resources.
+
+### Type of authentication
+Currently, `email/password` registration is supported.
+
+
+### Reset Password
+
+Admins can reset the passwords of team members in the `Settings` menu. If a password reset is requested, the user has 10 minutes to do it. 
+
+Password reset is done through the login process. The user's new password will be the one used on the login form. 
+
+After 10 minutes, the old password can be used to log in, and the password reset process is stopped. 
+
+
+## SSL Certificates
+
+Coolify would generate SSL certificates for your resources if you defined the URL starting with HTTPS. 
+
+### Let's Encrypt
+Coolify using [Let's Encrypt](https://letsencrypt.org/) helper. Only used if you use Coolify Proxy. 
+
+### www vs non-www
+Certificates are only generated for the defined URL. If you specify a non-www URL, only the non-www will have a certificate. You cannot reach the www URL. 
+
+>Usually, you need to redirect www to non-www on the DNS layer.
+
+If you would like to generate SSL certificates for both, there is an option called `Generate SSL for www and non-www?` for applications and services.

@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
 # WordPress
 
 It is based on the official [WordPress image](https://hub.docker.com/_/wordpress).

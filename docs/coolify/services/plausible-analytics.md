@@ -1,7 +1,3 @@
----
-sidebar_position: 3
----
-
 # Plausible Analytics
 
 It is based on the official [Plausible Analytics image](https://hub.docker.com/r/plausible/analytics).
