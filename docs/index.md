@@ -5,12 +5,12 @@
 Since 2022.07, I quit my daily job to focus on Coolify and to be an indie hacker. If you would like to follow me or my journey, you can do it [here](https://twitter.com/andrasbacsai).
 
 ## Products
-### [Coolify](./coolify/)
+### [Coolify](./coolify)
 An open-source & self-hostable Heroku / Netlify alternative.
 
 <a href="https://www.producthunt.com/posts/coolify?utm_source=badge-featured&amp;utm_medium=badge&amp;utm_souce=badge-coolify" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=338273&amp;theme=dark" alt="Coolify - An open-source &amp; self-hostable Heroku / Netlify alternative. | Product Hunt" style="width: 250px; height: 54px;" loading="lazy" width="250" height="54"></a>
 
-### [coolLabs Fonts](./fonts/)
+### [coolLabs Fonts](./fonts)
 A privacy-friendly drop-in replacement for Google Fonts.
 
 <a href="https://www.producthunt.com/posts/privacy-focused-google-fonts-alternative?utm_source=badge-featured&amp;utm_medium=badge&amp;utm_souce=badge-privacy-focused-google-fonts-alternative" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=330902&amp;theme=dark" alt="Privacy-focused Google Fonts alternative - Same API, privacy-focused, fast &amp; zero logging. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54"></a>
