@@ -19,9 +19,4 @@ If you have a new service / build pack you would like to add, raise an idea [her
 ## Why does it exists?
 It started because I was curious if I could write it. And this happened.
 
-I use it for all my applications, and since its launch, more and more people and companies have started to use it for their job!
-
-## Who's idea was this?
-It was [mine](https://twitter.com/andrasbacsai). 👋 I'm building it with my community over [Twitter](https://twitter.com/andrasbacsai)/[Discord](https://discord.gg/6rDM4fkymF)/[Github](https://github.com/coollabsio/coolify). If you are interested, come join and let's talk. :)
-
-
+I use it for all my applications, and since its launch, more and more people and companies have started to use it daily!

@@ -18,6 +18,3 @@ I'm using [BunnyCDN](https://bunny.net/) to serve all the fonts close to your us
 - All the application code is open-sourced.
 - BunnyCDN has an option to disable logging altogether.
 - Hosted on a bare metal server, not on a cloud provider.   
-
-## Who's idea was this?
-It was [mine](https://twitter.com/andrasbacsai). 👋 I'm building it with my community over [Twitter](https://twitter.com/andrasbacsai)/[Discord](https://discord.gg/6rDM4fkymF)/[Github](https://github.com/coollabsio/coolify). If you are interested, come join and let's talk. :)
