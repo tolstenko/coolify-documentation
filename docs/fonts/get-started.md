@@ -1,6 +1,5 @@
 # Get started
 
-## Fonts
 Change the domain name from `fonts.googleapis.com` to `api.fonts.coollabs.io` in your `<head>` tag; that's it!
 
 Example:

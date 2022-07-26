@@ -54,19 +54,16 @@ export default defineConfig({
           ]
         }
       ],
-      '/coolify/': [
+      '/coolify': [
         ...sidebarProducts(),
         ...sidebarCoolify()
       ],
-      '/fonts/': [
+      '/fonts': [
         ...sidebarProducts(),
         {
           text: 'Fonts',
-          collapsible: true,
           items: [
-            { text: 'Introduction', link: '/fonts/' },
             { text: 'Get Started', link: '/fonts/get-started' },
-
           ]
         }
       ],
@@ -91,8 +88,8 @@ function sidebarProducts() {
     {
       text: 'Products',
       items: [
-        { text: 'Coolify', link: '/coolify/' },
-        { text: 'Fonts', link: '/fonts/' },
+        { text: 'Coolify', link: '/coolify' },
+        { text: 'Fonts', link: '/fonts' },
       ]
     }
   ]
