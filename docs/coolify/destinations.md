@@ -18,7 +18,7 @@ There are 2 main configuration for Local Docker Engines.
 Using this proxy is optional but **highly recommended**. You can use your own reverse proxy, but you need to configure it manually, which could be a considerable effort.
 
 
-## Remote Docker Engine
+## Remote Docker Engine (🚧 WIP)
 Remote Docker Engine makes you use any kind of server as a deployment endpoint. You can have one Coolify instance as a control-plane and dashboard and deploy to unlimited number of servers.
 
 ### Requirements
