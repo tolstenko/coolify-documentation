@@ -23,6 +23,23 @@ export default defineConfig({
       { text: "Sponsorship", link: "https://opencollective.com/coollabsio" },
     ],
     sidebar: {
+      "/coolify/destinations": [
+        ...sidebarProducts(),
+        ...sidebarCoolify(),
+        {
+          text: "Destinations",
+          items: [
+            {
+              text: "Local Docker Engine",
+              link: "/coolify/destinations/local",
+            },
+            {
+              text: "Remote Docker Engine",
+              link: "/coolify/destinations/remote",
+            },
+          ],
+        },
+      ],
       "/coolify/services/": [
         ...sidebarProducts(),
         ...sidebarCoolify(),
