@@ -10,19 +10,18 @@ Each team could have different networks.
 - Remote Docker Engine
 
 ## Local Docker Engine
-There are 2 main configuration for Local Docker Engines.
+It means all resources are deployed to the same server as Coolify is running .
 1. **Engine** - `/var/run/docker.sock` - You cannot modify this.
 2. **Network** - Used to create docker networks within the defined Docker Engine.
 3. **Coolify Proxy** - This is a special proxy based on [Traefik](https://traefik.io/traefik/), configured automatically by Coolify. 
 
 Using this proxy is optional but **highly recommended**. You can use your own reverse proxy, but you need to configure it manually, which could be a considerable effort.
 
-
-## Remote Docker Engine (🚧 WIP)
-Remote Docker Engine makes you use any kind of server as a deployment endpoint. You can have one Coolify instance as a control-plane and dashboard and deploy to unlimited number of servers.
+## Remote Docker Engine
+Remote Docker Engine makes you use any kind of server as a destination endpoint. You can have one Coolify instance as a control-plane/dashboard and deploy to unlimited number of remote servers.
 
 ### Requirements
 The server needs to have:
-1. Install Docker Engine (20.11+).
-2. SSH key added to `.ssh/authorized_keys` file in the proper user's home directory.
-3. Same SSH key added to Coolifyin the `Settings` menu.
+1. Install Docker Engine (20.11+) - [instructions](https://docs.docker.com/engine/install/).
+2. Add SSH key to `.ssh/authorized_keys` file in the proper user's home directory - recommended root.
+3. Add the same SSH key added to Coolify in the `Settings/SSH Keys` menu.
