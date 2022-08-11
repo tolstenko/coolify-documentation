@@ -1,5 +1,7 @@
 # Remote Docker Engine
-Remote Docker Engine makes you use any kind of server as a destination endpoint. You can have one Coolify instance as a control-plane/dashboard and deploy to unlimited number of remote servers.
+Allows you to use any kind of server as a destination endpoint.
+
+You can have one Coolify instance as a control-plane/dashboard and deploy to unlimited number of remote servers.
 
 ### Requirements
 The server needs to have:
