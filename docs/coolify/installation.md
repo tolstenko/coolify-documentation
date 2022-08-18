@@ -37,8 +37,11 @@ wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./in
 Usage: install.sh [options...]
     -h, --help                  Show this help menu.
     -v, --version               Show script version.
+
     -d, --debug                 Show debug logs during installation.
     -f, --force                 Force installation, no questions asked.
+
+    -r, --restart                Only restart Coolify. Nothing more.
 
     -n, --do-not-track          Opt-out of telemetry. You can set export DO_NOT_TRACK=1 in advance.
 
