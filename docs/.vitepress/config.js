@@ -12,7 +12,7 @@ export default defineConfig({
     socialLinks: [
       { icon: "github", link: "https://github.com/coollabsio" },
       { icon: "twitter", link: "https://twitter.com/andrasbacsai" },
-      { icon: "discord", link: "https://discord.gg/6rDM4fkymF" },
+      { icon: "discord", link: "https://coollabs.io/discord" },
     ],
     editLink: {
       pattern:
