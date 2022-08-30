@@ -1,8 +1,10 @@
 :root {
   --vp-brand-hue: 265;
   --vp-c-brand: hsl(var(--vp-brand-hue), 97%, 66%);
+   --vp-c-green-dark: black;
 }
 :root.dark {
   --vp-brand-hue: 261;
   --vp-c-brand: hsl(var(--vp-brand-hue), 73%, 66%);
+  --vp-c-green-dark: white;
 }
