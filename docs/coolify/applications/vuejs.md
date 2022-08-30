@@ -2,10 +2,10 @@
 head:
   - - meta
     - name: description
-      content: Sponsorship coolLabs
+      content: Coolify - Applications - VueJS
   - - meta
     - name: keywords
-      content: sponsorship coollabs coolify 
+      content: applications vuejs coollabs coolify 
   - - meta
     - name: twitter:card
       content: summary_large_image

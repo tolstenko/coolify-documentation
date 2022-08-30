@@ -3,10 +3,10 @@ layout: page
 head:
   - - meta
     - name: description
-      content: Sponsorship coolLabs
+      content: coolLabs - Who we are?
   - - meta
     - name: keywords
-      content: sponsorship coollabs coolify 
+      content: coollabs coolify who we are
   - - meta
     - name: twitter:card
       content: summary_large_image

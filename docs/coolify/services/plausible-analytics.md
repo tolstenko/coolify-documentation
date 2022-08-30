@@ -2,10 +2,10 @@
 head:
   - - meta
     - name: description
-      content: Sponsorship coolLabs
+      content: Coolify - Services - Plausible Analytics
   - - meta
     - name: keywords
-      content: sponsorship coollabs coolify 
+      content: services plausible analytics coollabs coolify 
   - - meta
     - name: twitter:card
       content: summary_large_image

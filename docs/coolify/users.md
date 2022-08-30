@@ -2,10 +2,10 @@
 head:
   - - meta
     - name: description
-      content: Sponsorship coolLabs
+      content: Coolify - Users
   - - meta
     - name: keywords
-      content: sponsorship coollabs coolify 
+      content: users coollabs coolify 
   - - meta
     - name: twitter:card
       content: summary_large_image
