@@ -40,36 +40,27 @@ head:
     - property: og:image
       content: https://cdn.coollabs.io/assets/coollabs/og-image-documentation.png
 ---
-# WordPress
+# First Steps
+After you successfully installed Coolify, you can start configuring it via the provided UI.
 
-It is based on the official [WordPress image](https://hub.docker.com/_/wordpress).
+## Registration
 
-## Features
-### Extra Config
-You can define your WordPress configuration that will be embed into `wp-config.php`.
+The first registered user will be the `root/admin` user of your Coolify instance. This user will see and could change all resources deployed, access system-wide configurations, initiate one-click update process, etc.
 
-### Enable sFTP connection
-Enables an on-demand sFTP connection to the WordPress data directory. 
-> Useful if you want to use sFTP to upload files.
+ After the first user is registered successfully, `registration is disabled` to prevent unwanted registrations. 
 
-### Remote MySQL server
-You can use your own, remote database or use the one automatically created by Coolify.
+:::tip You can enable registration in the `Settings` menu. 
+:::
 
+Every other user won't access system-wide configurations and only see their own team's resources.
 
-## Secrets
-You can add all the official supported environment variables to customize your instance, like the followings:
+## Authentication Methods
+Currently, `email/password` registration is supported.
 
-```
-WORDPRESS_AUTH_KEY
-WORDPRESS_SECURE_AUTH_KEY
-WORDPRESS_LOGGED_IN_KEY
-WORDPRESS_NONCE_KEY
-WORDPRESS_AUTH_SALT
-WORDPRESS_SECURE_AUTH_SALT
-WORDPRESS_LOGGED_IN_SALT
-WORDPRESS_NONCE_SALT
-WORDPRESS_DEBUG
-...
-```
+## Reset Password
 
-For more info, check [the official documentation](https://hub.docker.com/_/wordpress).
+Admins can reset the passwords of team members in the `Settings` menu. If a password reset is requested, the user has 10 minutes to do it. 
+
+Password reset is done through the login process. The user's new password will be the one used on the login form. 
+
+After 10 minutes, the old password can be used to log in, and the password reset process is stopped. 

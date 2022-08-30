@@ -1,38 +1,93 @@
+---
+head:
+  - - meta
+    - name: description
+      content: Sponsorship coolLabs
+  - - meta
+    - name: keywords
+      content: sponsorship coollabs coolify 
+  - - meta
+    - name: twitter:card
+      content: summary_large_image
+  - - meta
+    - name: twitter:site
+      content: '@andrasbacsai'
+  - - meta
+    - name: twitter:title
+      content: Coolify
+  - - meta
+    - name: twitter:description
+      content: An open-source & self-hostable Heroku / Netlify alternative.
+  - - meta
+    - name: twitter:image
+      content: https://cdn.coollabs.io/assets/coollabs/og-image-documentation.png
+  - - meta
+    - property: og:type
+      content: website
+  - - meta
+    - property: og:url
+      content: https://coolify.io
+  - - meta
+    - property: og:title
+      content: Coolify
+  - - meta
+    - property: og:description
+      content: An open-source & self-hostable Heroku / Netlify alternative.
+  - - meta
+    - property: og:site_name
+      content: Coolify
+  - - meta
+    - property: og:image
+      content: https://cdn.coollabs.io/assets/coollabs/og-image-documentation.png
+---
 # Installation
 
 ## Minimum Requirements
 
-Coolify builds images locally for applications, which is a CPU-intensive process. 
+Coolify builds images in two places. 
 
+**Local server** with Local Docker Engine (the server you installed Coolify on).
+
+**Remote Server** with Remote Docker Engine (the server you added as a Destination)
+
+The server you are building on requires at least:
 - 2 CPUs
 - 2 GBs memory
 - 30+ GB of storage for the images.
 
-Other resources depend on the resource requirements. For example, WordPress needs a different CPU/memory than a Redis database.
+This is for building and storing images. 
+
+> If you would like to host applications/databases/services, you will need more hardware resources.
+
+Both `AMD64` and `ARM` architecture are supported.
+
+## Supported Operating Systems
 
 Currently, only `Ubuntu` servers are supported. If you would like to have other, please consider [open an issue on GitHub](https://github.com/coollabsio/coolify/issues/new).
 
-## Recommended ways
+## Automatically Install
 
 ### Automated
-Questions asked, but it is not that complicated.
+Questions asked, but it is not that complicated, trust me.
 
 ```bash
 wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./install.sh
 ```
 
 ### Scripted / fully automated
-No questions asked. Could be used to install Coolify programmatically.
+No questions asked. 
+
+>Could be used to install Coolify programmatically.
 
 :::tip Recommended way
-If you want, Coolify to handle everything for you.
+If you want to Coolify to handle everything for you.
 :::
 
 ```bash
 wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./install.sh -f
 ```
 
-## Options
+##$ Configuration
 ```sh
 Usage: install.sh [options...]
     -h, --help                  Show this help menu.
@@ -41,7 +96,7 @@ Usage: install.sh [options...]
     -d, --debug                 Show debug logs during installation.
     -f, --force                 Force installation, no questions asked.
 
-    -r, --restart                Only restart Coolify. Nothing more.
+    -r, --restart               Only restart Coolify. Nothing more.
 
     -n, --do-not-track          Opt-out of telemetry. You can set export DO_NOT_TRACK=1 in advance.
 
@@ -51,14 +106,15 @@ Usage: install.sh [options...]
     -i, --white-labeled-logo    Add your remote logo for your white-labeled version. Should be a http/https URL.
 ```
 
-## Manually
+## Manually Install
 
 1. Need to set the required environment variables in a `.env` file (see [below](./installation.md#environment-variables))
 2. Need to have [Docker Engine v20.10+](https://docs.docker.com/engine/install/) installed on your server.
 
 ### Environment Variables
 
-Coolify needs to have the following environment variables to be set in advance. (This is done automatically with the automated installation script.)
+Coolify needs to have the following environment variables to be set in advance.
+> This is done automatically with the automated installation script.
 
 ```text
 COOLIFY_APP_ID=
@@ -82,8 +138,13 @@ COOLIFY_AUTO_UPDATE=false
 | COOLIFY_WHITE_LABELED_ICON | A remote icon to be replaced on the login/registration page. |
 | COOLIFY_AUTO_UPDATE | It updates your Coolify instance automatically behind the scenes. |
 
+## Restart
 
-### Start Coolify
+```bash
+wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./install.sh -r
+```
+
+## Manually Start
 
 ```sh
 docker run -tid --env-file .env -v /var/run/docker.sock:/var/run/docker.sock -v coolify-db-sqlite coollabsio/coolify:latest /bin/sh -c "env | grep COOLIFY > .env && docker compose up -d --force-recreate"
@@ -91,9 +152,11 @@ docker run -tid --env-file .env -v /var/run/docker.sock:/var/run/docker.sock -v 
 
 Why is this complicated command instead of just a `docker compose up?`
 
-Coolify needs to be started inside docker's namespace. In short, it is necessary for the auto-update process.
+Coolify needs to be started inside docker's namespace.
 
-## Change configuration of a running instance
+> In short, it is necessary for the auto-update process.
+
+## Change Configuration
 
 You can always execute the installation script with different options to reconfigure Coolify.
 
@@ -109,45 +172,14 @@ For example:
   So if you installed Coolify with `--do-no-track` before, and you want to also use `--white-labeled` option, you need execute the install script with `--do-not-track` and `--white-labeled`!
 :::
 
-## Restart Coolify
 
-If your Coolify instance stops working (eg: OOM), you can restart it with the following command.
+## Firewall settings
 
-```bash
-wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./install.sh -f
-```
+You need to allow the following ports in your firewall:
+- `80, 443` -> For Coolify Proxy (if you are using it)
+- `3000` -> For Coolify itself `mandatory`
+- `9000-9100` -> For TCP/HTTP on-demand proxies. You can specify different range in the `Settings` menu.
 
-## Registration
-
-After installation, the first registered user will be the `root/admin` user of your Coolify instance. It will see/change all resources deployed, access system-wide configurations, one-click update process, etc.
-
-> By default, **registration is disabled** afterward. You can enable registration in the `Settings` menu.
-
-Every other user won't access system-wide configurations and only see their team's resources.
-
-### Type of authentication
-Currently, `email/password` registration is supported.
-
-
-### Reset Password
-
-Admins can reset the passwords of team members in the `Settings` menu. If a password reset is requested, the user has 10 minutes to do it. 
-
-Password reset is done through the login process. The user's new password will be the one used on the login form. 
-
-After 10 minutes, the old password can be used to log in, and the password reset process is stopped. 
-
-
-## SSL Certificates
-
-Coolify would generate SSL certificates for your resources if you defined the URL starting with HTTPS. 
-
-### Let's Encrypt
-Coolify using [Let's Encrypt](https://letsencrypt.org/) helper. Only used if you use Coolify Proxy. 
-
-### www vs non-www
-Certificates are only generated for the defined URL. If you specify a non-www URL, only the non-www will have a certificate. You cannot reach the www URL. 
-
->Usually, you need to redirect www to non-www on the DNS layer.
-
-If you would like to generate SSL certificates for both, there is an option called `Generate SSL for www and non-www?` for applications and services.
+:::warning
+If you are using `Oracle Cloud free ARM server`, you need to allow these ports, otherwise you cannot even reach Coolify itself!
+:::

@@ -1,6 +1,48 @@
+---
+head:
+  - - meta
+    - name: description
+      content: Sponsorship coolLabs
+  - - meta
+    - name: keywords
+      content: sponsorship coollabs coolify 
+  - - meta
+    - name: twitter:card
+      content: summary_large_image
+  - - meta
+    - name: twitter:site
+      content: '@andrasbacsai'
+  - - meta
+    - name: twitter:title
+      content: Coolify
+  - - meta
+    - name: twitter:description
+      content: An open-source & self-hostable Heroku / Netlify alternative.
+  - - meta
+    - name: twitter:image
+      content: https://cdn.coollabs.io/assets/coollabs/og-image-applications.png
+  - - meta
+    - property: og:type
+      content: website
+  - - meta
+    - property: og:url
+      content: https://coolify.io
+  - - meta
+    - property: og:title
+      content: Coolify
+  - - meta
+    - property: og:description
+      content: An open-source & self-hostable Heroku / Netlify alternative.
+  - - meta
+    - property: og:site_name
+      content: Coolify
+  - - meta
+    - property: og:image
+      content: https://cdn.coollabs.io/assets/coollabs/og-image-applications.png
+---
 # Applications
 
-Applications are used to deploy a production version of your applications. All data are based on your provided git repositories.
+Applications are used to deploy a production version of your code. All data are based on your provided git repositories.
 
 Coolify not just builds but also configures a reverse proxy (Traefik) automatically and requests an SSL certificate through Let's Encrypt. 
 
@@ -8,13 +50,14 @@ You just need to push your code!
 
 If you have a new build pack you would like to add, raise an idea [here](https://feedback.coolify.io/) to get feedback from the community!
 
-## Types of applications supported
-Applications are based on custom build packs (later, it will support cloud-native and Heroku build packs).
+## Supported Applications
+Applications are based on `custom build packs` and `Heroku build packs`
 
 Build packs have predefined configurations and build processes, especially for frameworks, like VueJs, Svelte, React, etc.
 
 > These build processes do not handle all the use-cases, just the most commonly used ones. Consider using the `Docker` build pack if you need a custom build process.
 
+- [Heroku](./heroku)
 - [Static sites](./static)
 - [NodeJS](./nodejs)
 - [VueJS](./vuejs)
@@ -44,13 +87,11 @@ You can expose your application to a port on the host system.
 
 > Useful if you would like to use your own reverse proxy or tunnel and also in development mode of Coolify. 
 
-## Features
-
-### Enable Automatic Deployment
+## Automatic Deployment
 Enable automatic deployment through webhooks. Enabled by default.
 > Useful to turn off if you would like to deploy your applications manually, not on every commit.
 
-### Enable MR/PR Previews
+## MR/PR Previews
 Automatically builds `Merge Request` and `Pull Requests`. Default: `off`
 > Useful when you would like to see others' work deployed.
 

@@ -1,10 +1,52 @@
+---
+head:
+  - - meta
+    - name: description
+      content: Sponsorship coolLabs
+  - - meta
+    - name: keywords
+      content: sponsorship coollabs coolify 
+  - - meta
+    - name: twitter:card
+      content: summary_large_image
+  - - meta
+    - name: twitter:site
+      content: '@andrasbacsai'
+  - - meta
+    - name: twitter:title
+      content: Coolify
+  - - meta
+    - name: twitter:description
+      content: An open-source & self-hostable Heroku / Netlify alternative.
+  - - meta
+    - name: twitter:image
+      content: https://cdn.coollabs.io/assets/coollabs/og-image-services.png
+  - - meta
+    - property: og:type
+      content: website
+  - - meta
+    - property: og:url
+      content: https://coolify.io
+  - - meta
+    - property: og:title
+      content: Coolify
+  - - meta
+    - property: og:description
+      content: An open-source & self-hostable Heroku / Netlify alternative.
+  - - meta
+    - property: og:site_name
+      content: Coolify
+  - - meta
+    - property: og:image
+      content: https://cdn.coollabs.io/assets/coollabs/og-image-services.png
+---
 # Services
 
 Services are popular open-sourced and self-hostable applications provided as a service for you.
 
 If you have a new service you would like to add, raise an idea [here](https://feedback.coolify.io/) to get feedback from the community!
 
-## Types of services supported
+## Supported Services
 
 - [WordPress](./wordpress)
 - [Ghost](https://ghost.org)
@@ -20,13 +62,15 @@ If you have a new service you would like to add, raise an idea [here](https://fe
 - [Umami](https://github.com/mikecao/umami)
 - [Fider](https://fider.io)
 - [Hasura](https://hasura.io)
+- [Appwrite](https://appwrite.io)
+- [Glitchtip](https://glitchtip.com)
 
-:::tip
-Some applications could take several minutes to start up.
+:::warning
+Some applications could take several minutes to start up. Please wait a bit after you start.
 :::
 
 ## Requirements
-Each service requires a specific amount of CPU / memory/storage. Choose your services based on their requirements.
+Each service requires a specific amount of `CPU / memory / storage`. See their documentation to help on how to choose your hardware details.
 
 ## Exposed Port
 You can expose your application to a port on the host system.
@@ -42,5 +86,5 @@ You can check the runtime logs of your services.
 ## Secrets
 There are some predefined secrets on the frontend, that are generated automatically (like passwords, users.) or you can fill manually. If you need any futher environment variable, you can define them in the secrets tab.
 
-## Update service to the latest version
+## Update Versions
 If you stop/start a service, the latest docker image will be pulled for the selected image tag.

@@ -1,10 +1,17 @@
 import { defineConfig } from "vitepress";
 
 export default defineConfig({
+  lang: 'en-US',
   title: "coolLabs",
   description: "Documentation for all applications & services of coolLabs",
+  lastUpdated: true,
+  markdown: {
+    theme: 'material-palenight',
+    lineNumbers: true
+  },
+  cleanUrls: 'with-subfolders',
   themeConfig: {
-    lastUpdated: true,
+    logo: '/icon.png',
     footer: {
       message: "Released under the Apache License.",
       copyright: "Copyright © 2019-present Andras Bacsai",
@@ -20,112 +27,103 @@ export default defineConfig({
     },
     nav: [
       { text: "Feedback", link: "https://feedback.coolify.io/" },
-      { text: "Sponsorship", link: "https://opencollective.com/coollabsio" },
+
     ],
     sidebar: {
-      "/coolify/destinations": [
-        ...sidebarProducts(),
-        ...sidebarCoolify(),
+      "/": [
         {
-          text: "Destinations",
+          text: "General",
+
           items: [
-            {
-              text: "Local Docker Engine",
-              link: "/coolify/destinations/local",
-            },
-            {
-              text: "Remote Docker Engine",
-              link: "/coolify/destinations/remote",
-            },
-          ],
+            { text: "Introduction", link: "/" },
+            { text: "Sponsorship", link: "/sponsorship" },
+            { text: "Contact", link: "/contact" },
+          ]
         },
-      ],
-      "/coolify/services/": [
-        ...sidebarProducts(),
-        ...sidebarCoolify(),
         {
-          text: "Services",
+          text: "Coolify",
+          collapsible: true,
           items: [
+            { text: "Get Started", link: "/coolify/" },
+            { text: "Architecture", link: "/coolify/architecture" },
+            { text: "Installation", link: "/coolify/installation" },
+            { text: "Settings", link: "/coolify/settings" },
+            { text: "Users", link: "/coolify/users" },
+            { text: "Teams", link: "/coolify/teams" },
+            { text: "Sources", link: "/coolify/sources" },
+            { text: "Destinations", link: "/coolify/destinations" },
             {
-              text: "Plausible Analytics",
-              link: "/coolify/services/plausible-analytics",
+              text: "Applications", link: "/coolify/applications/",
+              items: [
+                {
+                  text: "Heroku", link: "/coolify/applications/heroku"
+                },
+                {
+                  text: "Static Sites", link: "/coolify/applications/static"
+                },
+                {
+                  text: "Deno", link: "/coolify/applications/deno"
+                },
+                {
+                  text: "NodeJS", link: "/coolify/applications/nodejs"
+                },
+                {
+                  text: "VueJS", link: "/coolify/applications/vuejs"
+                },
+                {
+                  text: "NuxtJS", link: "/coolify/applications/nuxtjs"
+                },
+                {
+                  text: "NextJS", link: "/coolify/applications/nextjs"
+                },
+                {
+                  text: "React/Preact", link: "/coolify/applications/react-preact"
+                },
+                {
+                  text: "Gatsby", link: "/coolify/applications/gatsby"
+                },
+                {
+                  text: "Svelte", link: "/coolify/applications/svelte"
+                },
+                {
+                  text: "PHP", link: "/coolify/applications/php"
+                },
+                {
+                  text: "Python", link: "/coolify/applications/python"
+                },
+                {
+                  text: "Laravel", link: "/coolify/applications/laravel"
+                },
+                {
+                  text: "Rust", link: "/coolify/applications/rust"
+                },
+                {
+                  text: "Docker", link: "/coolify/applications/docker"
+                },
+              ]
             },
-            { text: "Wordpress", link: "/coolify/services/wordpress" },
-          ],
-        },
-      ],
-      "/coolify/applications/": [
-        ...sidebarProducts(),
-        ...sidebarCoolify(),
-        {
-          text: "Build Packs",
-          items: [
-            { text: "Static", link: "/coolify/applications/static" },
-            { text: "NodeJS", link: "/coolify/applications/nodejs" },
-            { text: "VueJS", link: "/coolify/applications/vuejs" },
-            { text: "NuxtJS", link: "/coolify/applications/nuxtjs" },
+            { text: "Databases", link: "/coolify/databases" },
             {
-              text: "React/Preact",
-              link: "/coolify/applications/react-preact",
+              text: "Services", link: "/coolify/services/", items: [
+                {
+                  text: "Plausible Analytics", link: "/coolify/services/plausible-analytics"
+                },
+                {
+                  text: "WordPress", link: "/coolify/services/wordpress"
+                },
+              ]
             },
-            { text: "Gatsby", link: "/coolify/applications/gatsby" },
-            { text: "Svelte", link: "/coolify/applications/svelte" },
-            { text: "PHP", link: "/coolify/applications/php" },
-            { text: "Python", link: "/coolify/applications/python" },
-            { text: "Laravel", link: "/coolify/applications/laravel" },
-            { text: "Rust", link: "/coolify/applications/rust" },
-            { text: "Docker", link: "/coolify/applications/docker" },
-            { text: "Deno", link: "/coolify/applications/deno" },
-          ],
+          ]
         },
-      ],
-      "/coolify": [...sidebarProducts(), ...sidebarCoolify()],
-      "/fonts": [
-        ...sidebarProducts(),
         {
           text: "Fonts",
-          items: [{ text: "Get Started", link: "/fonts/get-started" }],
+          items: [
+            { text: "Introduction", link: "/fonts/" },
+            { text: "Get Started", link: "/fonts/get-started" },
+          ]
         },
       ],
-      "/": [...sidebarProducts()],
-    },
+
+    }
   },
 });
-
-function sidebarProducts() {
-  return [
-    {
-      text: "Welcome",
-      collapsible: true,
-      items: [
-        { text: "Introduction", link: "/" },
-        { text: "Who we are?", link: "/who-we-are" },
-        { text: "Contact", link: "/contact" },
-      ],
-    },
-    {
-      text: "Products",
-      items: [
-        { text: "Coolify", link: "/coolify" },
-        { text: "Fonts", link: "/fonts" },
-      ],
-    },
-  ];
-}
-
-function sidebarCoolify() {
-  return [
-    {
-      text: "Coolify",
-      items: [
-        { text: "Installation", link: "/coolify/installation" },
-        { text: "Git Sources", link: "/coolify/sources" },
-        { text: "Destinations", link: "/coolify/destinations/" },
-        { text: "Applications", link: "/coolify/applications/" },
-        { text: "Databases", link: "/coolify/databases/" },
-        { text: "Services", link: "/coolify/services/" },
-        { text: "Teams", link: "/coolify/teams" },
-      ],
-    },
-  ];
-}

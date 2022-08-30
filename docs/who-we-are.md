@@ -1,5 +1,45 @@
 ---
 layout: page
+head:
+  - - meta
+    - name: description
+      content: Sponsorship coolLabs
+  - - meta
+    - name: keywords
+      content: sponsorship coollabs coolify 
+  - - meta
+    - name: twitter:card
+      content: summary_large_image
+  - - meta
+    - name: twitter:site
+      content: '@andrasbacsai'
+  - - meta
+    - name: twitter:title
+      content: coolLabs
+  - - meta
+    - name: twitter:description
+      content: Control your digital footprint
+  - - meta
+    - name: twitter:image
+      content: https://cdn.coollabs.io/assets/coollabs/og-image-documentation.png
+  - - meta
+    - property: og:type
+      content: website
+  - - meta
+    - property: og:url
+      content: https://coollabs.io
+  - - meta
+    - property: og:title
+      content: coolLabs
+  - - meta
+    - property: og:description
+      content: Control your digital footprint
+  - - meta
+    - property: og:site_name
+      content: coolLabs
+  - - meta
+    - property: og:image
+      content: https://cdn.coollabs.io/assets/coollabs/og-image-documentation.png
 ---
 <script setup>
 import {
