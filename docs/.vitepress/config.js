@@ -42,7 +42,6 @@ export default defineConfig({
         },
         {
           text: "Coolify",
-          collapsible: true,
           items: [
             { text: "Get Started", link: "/coolify/" },
             { text: "Architecture", link: "/coolify/architecture" },
@@ -52,17 +51,6 @@ export default defineConfig({
             { text: "Teams", link: "/coolify/teams" },
             { text: "Sources", link: "/coolify/sources" },
             { text: "Destinations", link: "/coolify/destinations" },
-            { text: "Databases", link: "/coolify/databases" },
-            {
-              text: "Services", link: "/coolify/services/", items: [
-                {
-                  text: "Plausible Analytics", link: "/coolify/services/plausible-analytics"
-                },
-                {
-                  text: "WordPress", link: "/coolify/services/wordpress"
-                },
-              ]
-            },
             {
               text: "Applications", link: "/coolify/applications/",
               items: [
@@ -113,7 +101,17 @@ export default defineConfig({
                 },
               ]
             },
-       
+            { text: "Databases", link: "/coolify/databases" },
+            {
+              text: "Services", link: "/coolify/services/", items: [
+                {
+                  text: "Plausible Analytics", link: "/coolify/services/plausible-analytics"
+                },
+                {
+                  text: "WordPress", link: "/coolify/services/wordpress"
+                },
+              ]
+            },
           ]
         },
         {
