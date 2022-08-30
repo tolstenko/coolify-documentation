@@ -115,7 +115,7 @@ export default defineConfig({
           ]
         },
         {
-          text: "Fonts",
+          text: "coolLabs Fonts",
           items: [
             { text: "Introduction", link: "/fonts/" },
             { text: "Get Started", link: "/fonts/get-started" },
