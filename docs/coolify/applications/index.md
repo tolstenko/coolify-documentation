@@ -101,3 +101,13 @@ They could have different `secrets` than the main application.
 ### Debug Logs
 To see extended build logs. Default: `off`
 > Useful if something is wrong with the build process.
+
+
+## Public Repository
+You can also build and deploy any public repositories from Github.com and Gitlab.com.
+
+Examples:
+- https://github.com/coollabsio/nodejs-example -> You can choose the branch.
+- https://github.com/coollabsio/nodejs-example/tree/main -> Preselect `main` branch.
+- https://gitlab.com/aleveha/fastify-example -> You can choose the branch.
+- https://gitlab.com/aleveha/fastify-example/-/tree/master -> Preselect `master` branch.
