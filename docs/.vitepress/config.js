@@ -113,6 +113,8 @@ export default defineConfig({
               ]
             },
             { text: "Secrets", link: "/coolify/secrets" },
+            { text: "FAQ", link: "/coolify/faq" },
+
           ]
         },
         {
