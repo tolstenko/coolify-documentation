@@ -69,5 +69,5 @@ You can have one Coolify instance as a control-plane/dashboard and deploy to unl
 ### Requirements
 The server needs to have:
 1. Install Docker Engine (20.11+) - [instructions](https://docs.docker.com/engine/install/).
-2. Add SSH **public key** to `.ssh/authorized_keys` file in the proper user's home directory, recommended `root`, but it can be [any user who have access to `Docker Engine`](https://docs.docker.com/engine/install/linux-postinstall/).
-3. Add the **private key** of the same SSH key added to the remote server in the `Settings/SSH Keys` menu.
+2. Add SSH `public key` to `.ssh/authorized_keys` file in the proper user's home directory, recommended `root`, but it can be [any user who have access to `Docker Engine`](https://docs.docker.com/engine/install/linux-postinstall/).
+3. Add the `private key` of the same SSH key added to the remote server in the `Settings/SSH Keys` menu.
