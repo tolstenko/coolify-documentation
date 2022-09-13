@@ -87,7 +87,7 @@ If you want to Coolify to handle everything for you.
 wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./install.sh -f
 ```
 
-##$ Configuration
+## Configuration options
 ```sh
 Usage: install.sh [options...]
     -h, --help                  Show this help menu.
