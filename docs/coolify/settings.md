@@ -48,7 +48,7 @@ Users in the `root team` can configure system-wide settings here.
 
 This is `optional.`
 
-You can specify a domain name to your Coolfiy instance. Otherwise you need to use `ip:3000` to reach your instance and all webhooks will be going to this destination.
+You can specify a domain name to your Coolify instance. Otherwise you need to use `ip:3000` to reach your instance and all webhooks will be going to this destination.
 
 ## Public Port Range
 
