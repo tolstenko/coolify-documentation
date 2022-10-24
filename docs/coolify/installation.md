@@ -63,7 +63,7 @@ Both `AMD64` and `ARM` architecture are supported.
 
 ## Supported Operating Systems
 
-Currently, only `Ubuntu` servers are supported. If you would like to have other, please consider [open an issue on GitHub](https://github.com/coollabsio/coolify/issues/new).
+Currently, `Debian` based servers are supported, due to the installation script (Coolify is supported on every OS that could run a Docker Engine). If you would like to have other, please consider [open an issue on GitHub](https://github.com/coollabsio/coolify/issues/new).
 
 ## Automatically Install
 
@@ -183,3 +183,20 @@ You need to allow the following ports in your firewall:
 :::warning
 If you are using `Oracle Cloud free ARM server`, you need to allow these ports, otherwise you cannot even reach Coolify itself!
 :::
+
+## Reset Root password in Coolify
+You need to override the database with the following command:
+
+```bash
+docker exec coolify bash -c "sqlite3 /app/db/prod.db 'update User set password=\"RESETME\", updatedAt=`date +%s%N|cut -b1-13` where id=0'"
+```
+This will tag the root user with a password reset flag. Then if you login in the next 10 minutes, your password will be changed to the password you are using to login.
+
+
+## Uninstall
+
+You can easily uninstall Coolify by stopping the following containers, `coolify`, `coolify-proxy` and `coolify-fluentbit`, or execute the following script:
+
+```bash
+docker stop -t 0 coolify coolify-proxy coolify-fluentbit; docker rm coolify coolify-proxy coolify-fluentbit
+```
