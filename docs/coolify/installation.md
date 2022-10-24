@@ -184,7 +184,7 @@ You need to allow the following ports in your firewall:
 If you are using `Oracle Cloud free ARM server`, you need to allow these ports, otherwise you cannot even reach Coolify itself!
 :::
 
-## Reset Root password in Coolify
+## Reset Root password
 You need to override the database with the following command:
 
 ```bash
