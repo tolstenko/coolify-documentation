@@ -64,18 +64,18 @@ Minimum required resources for Coolify:
 
 ## Additional Resources
 
-Based on what you would like to run with Coolify, additional resources are
+Based on what you would like to run with Coolify, additional resources (CPU, memory, disk) are
 needed.
 
-Self-hosting could be heavy if you would like to run a lot of things on it.
+Self-hosting could be heavy if you would like to run a lot of things.
 
 For example, I'm hosting most of my production stuffs on a server with:
 
-- 8GB of memory (usage 3.5GB)
-- 4 CPUs (usage ~20-30%)
+- 8GB of memory (average usage 3.5GB)
+- 4 CPUs (average usage ~20-30%)
 - 150GB disk (usage 40GB)
 
-Hosting the following thigs:
+Hosting the following things:
 
 - 3 NodeJS apps
 - 4 Static sites
