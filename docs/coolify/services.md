@@ -48,9 +48,9 @@ If you have a new service you would like to add, raise an idea [here](https://fe
 
 ## Supported Services
 
-- [WordPress](./wordpress)
+- [WordPress](https://wordpress.org)
 - [Ghost](https://ghost.org)
-- [Plausible Analytics](./plausible-analytics)
+- [Plausible Analytics](https://plausible.io)
 - [NocoDB](https://nocodb.com)
 - [VSCode Server](https://github.com/cdr/code-server)
 - [MinIO](https://min.io)
