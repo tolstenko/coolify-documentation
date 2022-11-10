@@ -2,10 +2,10 @@
 head:
   - - meta
     - name: description
-      content: Coolify - Applications - Deno
+      content: Coolify - Applications - Docker
   - - meta
     - name: keywords
-      content: deno applications coollabs coolify 
+      content: applications docker coollabs coolify 
   - - meta
     - name: twitter:card
       content: summary_large_image
@@ -40,5 +40,5 @@ head:
     - property: og:image
       content: https://cdn.coollabs.io/assets/coollabs/og-image-applications.png
 ---
-# Deno
-Base docker image: [denoland/deno:latest](https://registry.hub.docker.com/r/denoland/deno)
+# Docker Compose
+The `Docker Compose` build pack is a powerful one. You can use your docker-compose.yaml files to build & serve your applications. It means you can deploy any unsupported (natively with build packs) applications, services, anything, where a simple docker-compose file is enough!

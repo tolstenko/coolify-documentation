@@ -42,11 +42,14 @@ head:
 ---
 # Architecture
 
-Coolify consists of four parts.
+Coolify consist of :
+- [User Interface](#ui)
+- [API](#api)
+- [HTTP/TCP Proxy](#http-proxy) 
+- [TCP Proxies](#tcp-proxies) for databases. 
+- [SSL certificates](#ssl-certs) are handled by Let's Encrypt.
 
-An [UI](#ui), an [API](#api), a [HTTP Proxy](#http-proxy) and optional [TCP Proxies](#tcp-proxies).
-
-## UI
+## User Interface
 The UI you could use to configure your instance and all resources, see their status, usage, etc.
 
 It is a static SPA site, based on [SvelteKit](https://kit.svelte.dev).
@@ -73,7 +76,7 @@ Yes. Traefik is written in a way, that it use only ~10MB of memory, so it is not
 
 ## SSL Certs
 
-Coolify would generate SSL certificates for your resources if you defined the URL starting with `https`. 
+Coolify would generate SSL certificates for your resources if you defined an URL starting with `https`. 
 
 ### Let's Encrypt
 Coolify using [Let's Encrypt](https://letsencrypt.org/) helper to request, generate and store SSL certificates.

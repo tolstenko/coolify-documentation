@@ -45,3 +45,15 @@ head:
 ## Run Coolify with existing Traefik instance
 
 Here is a [detailed blog](https://beaussan.io/blog/coolify-into-existing-traefik) post from [Nicolas Beaussart](https://twitter.com/beaussan) on how to use Coolify with your existing Traefik instance!
+
+## Reset Root password
+This will tag the root user with a password reset flag. Then if you login in the
+next 10 minutes, your password will be changed to the password you are using to
+login.
+
+> If expires, just execute this script again.
+
+```bash
+docker exec coolify bash -c \ 
+"sqlite3 /app/db/prod.db 'update User set password=\"RESETME\", updatedAt=`date +%s%N|cut -b1-13` where id=0'"
+```

@@ -41,40 +41,67 @@ head:
       content: https://cdn.coollabs.io/assets/coollabs/og-image-documentation.png
 ---
 # Settings
-Users in the `root team` can configure system-wide settings here.
+Only users in the `root team` could configure system-wide settings.
+
+## URL Instance Domain
+> optional
+
+You can specify a Fully Qualified Domain Name (FQDN, eg: https://example.com) for your Coolify instance. 
+
+Without this configuration you need to use `<ip address>:3000` to reach your Coolify instance and all webhooks will be going to the ip address.
+
+:::warning
+If you change the domain name and you already have an existing integration with any Git provider, the webhooks (for autobuild and PR deployments, etc...) will fail. You need to reconfigure the URL manually in the GitHub/GitLab App.
+:::
+
+## Default Redirect URL
+> optional
+
+Redirect not configured services to this page. Like if you set a DNS entry for `example.com`, but you do not have anything running on this domain, Coolify Proxy will redirect any requests to this `Default Redirect URL`.
 
 
-## URL (FQDN)
+## Generate SSL for www and non-www
+> default: off
 
-This is `optional.`
-
-You can specify a domain name to your Coolify instance. Otherwise you need to use `ip:3000` to reach your instance and all webhooks will be going to this destination.
+You can specify if you would like to reach your Coolify instance on www & non-www as well, or just the defined FQDN (https://example.com -> non-www).
 
 ## Public Port Range
+> default: 9000-9100
 
-Used for:
-- Public databases
-- Services with special needs
-- SSH connections to Remote Docker Engines
+Port rage for on-demand TCP proxies (public databases), services (if need additional proxies).
 
 :::tip
- Allow these ports in your firewall.
+ Allow these ports in your [firewall settings](./firewall.md).
 :::
 
 ## DNS Check
+> default: on
+
 By default, all DNS settings would be resolvable by Let's Encrypt servers and Coolify. If you are using behind a reverse proxy or tunnel, you can disable this check to prevent unnecessary errors.
 
 ## Custom DNS Servers
+> optional
 
-This is `optional.`
+> default: the OS configured DNS servers will be used
 
-If you have an internal DNS server, you can specify them here. Otherwise, the OS configured DNS servers will be used.
+If you have an internal DNS server, you can specify them here with comma separated a list, for example: `1.1.1.1,8.8.8.8`.
 
 ## Registration allowed
+> default: on, but after the first registration, off.
+
 After the first registration, this option is enabled to prevent unwanted registrations.
 
-## Auto Update Coolify (beta)
-If you enable it, the update process of Coolify will be done automatically. You do not need to click on that pink shiney button anymore. 
+## Auto Update Coolify
+> default: off
+
+If enabled, Coolify checks for update every ~10 minutes and apply them automatically if there is a new version available.
+
+:::tip
+All resources (applications, databases, services) are keep running and available. Coolify does not required to run them. Only Git webhooks will fail during the update.
+:::
 
 ## SSH Keys
 You can add SSH Keys (private keys) to your Coolify instance, which can be used to connect to a [Remote Docker Engine](./destinations.md#remote-docker-engine).
+
+## SSL Certificates
+You can add custom SSL certificates to Coolify Proxy, even self-signed.

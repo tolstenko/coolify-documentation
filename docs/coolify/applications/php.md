@@ -51,16 +51,3 @@ By default, Nginx is used to serve your application, but if you have a `.htacces
 Composer will install all dependencies if `composer.json` is detected.
 
 You can customize this image with environment variables, see the [docs](https://dockerfile.readthedocs.io/en/latest/content/DockerImages/dockerfiles/php-nginx.html).
-
-## Versions supported:
-- 8.0
-- 7.4
-- 7.3
-- 7.2
-- 7.1
-- 7.0
-- 5.6
-
-:::tip
-If you would like to have other, please consider [open an issue on GitHub](https://github.com/coollabsio/coolify/issues/new).
-:::

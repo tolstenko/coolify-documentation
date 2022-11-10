@@ -44,10 +44,3 @@ head:
 Base docker image: [rust](https://hub.docker.com/_/rust)
 
 Rust build pack leverages `cargo-chef` to create a cache layer. The following builds will be significantly faster after the first build is successfully done.
-
-## Supported Versions
-- 1.60
-
-:::tip
-If you would like to have other, please consider [open an issue on GitHub](https://github.com/coollabsio/coolify/issues/new).
-:::

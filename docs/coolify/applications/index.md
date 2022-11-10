@@ -71,6 +71,7 @@ Build packs have predefined configurations and build processes, especially for f
 - [Laravel](./laravel)
 - [Rust](./rust)
 - [Docker](./docker)
+- [Docker-Compose (beta)](./docker-compose)
 - [Deno](./deno)
 
 To choose the best-fitting build pack, Coolify scans your repository to guess it.

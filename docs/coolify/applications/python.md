@@ -42,13 +42,3 @@ head:
 ---
 # Python
 Base docker image: [python](https://hub.docker.com/_/python)
-
-## Versions supported:
-- 3.10
-- 3.9
-- 3.8
-- 3.7
-
-:::tip
-If you would like to have other, please consider [open an issue on GitHub](https://github.com/coollabsio/coolify/issues/new).
-:::

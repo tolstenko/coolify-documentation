@@ -40,80 +40,45 @@ head:
     - property: og:image
       content: https://cdn.coollabs.io/assets/coollabs/og-image-documentation.png
 ---
+
 # Installation
 
-## Minimum Requirements
+This section provide details on how to install Coolify.
 
-Coolify builds images in two places. 
+## Scripted
 
-**Local server** with Local Docker Engine (the server you installed Coolify on).
-
-**Remote Server** with Remote Docker Engine (the server you added as a Destination)
-
-The server you are building on requires at least:
-- 2 CPUs
-- 2 GBs memory
-- 30+ GB of storage for the images.
-
-This is for building and storing images. 
-
-> If you would like to host applications/databases/services, you will need more hardware resources.
-
-Both `AMD64` and `ARM` architecture are supported.
-
-## Supported Operating Systems
-
-Currently, `Debian` based servers are supported, due to the installation script (Coolify is supported on every OS that could run a Docker Engine). If you would like to have other, please consider [open an issue on GitHub](https://github.com/coollabsio/coolify/issues/new).
-
-## Automatically Install
-
-### Automated
-Questions asked, but it is not that complicated, trust me.
+Prompts for answers:
 
 ```bash
-wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./install.sh
+wget -q https://get.coollabs.io/coolify/install.sh \
+-O install.sh; sudo bash ./install.sh
 ```
 
-### Scripted / fully automated
-No questions asked. 
-
->Could be used to install Coolify programmatically.
-
-:::tip Recommended way
-If you want to Coolify to handle everything for you.
-:::
+No question asked (force):
 
 ```bash
-wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./install.sh -f
+wget -q https://get.coollabs.io/coolify/install.sh \
+-O install.sh; sudo bash ./install.sh -f
 ```
+Opt-out from telemetry (count installed instances on the [landing page](https://coolify.io))
 
-## Configuration options
-```sh
-Usage: install.sh [options...]
-    -h, --help                  Show this help menu.
-    -v, --version               Show script version.
-
-    -d, --debug                 Show debug logs during installation.
-    -f, --force                 Force installation, no questions asked.
-
-    -r, --restart               Only restart Coolify. Nothing more.
-
-    -n, --do-not-track          Opt-out of telemetry. You can set export DO_NOT_TRACK=1 in advance.
-
-    -a, --auto-update           Warning: TESTING PHASE, DO NOT USE IT YET! Enable auto update feature of Coolify.
-
-    -w, --white-labeled         Install white-labeled version. Contact me before using it (https://docs.coollabs.io/contact)
-    -i, --white-labeled-logo    Add your remote logo for your white-labeled version. Should be a http/https URL.
+```bash
+wget -q https://get.coollabs.io/coolify/install.sh \
+-O install.sh; sudo bash ./install.sh -n
 ```
+You can review the script [here](https://github.com/coollabsio/get.coollabs.io/blob/main/static/coolify/install.sh).
 
-## Manually Install
+## Manually 
 
-1. Need to set the required environment variables in a `.env` file (see [below](./installation.md#environment-variables))
-2. Need to have [Docker Engine v20.10+](https://docs.docker.com/engine/install/) installed on your server.
+1. Need to set the required environment variables in a `.env` file (see
+   [below](./installation.md#environment-variables))
+2. Need to have [Docker Engine v20.10+](https://docs.docker.com/engine/install/)
+   installed on your server.
 
 ### Environment Variables
 
 Coolify needs to have the following environment variables to be set in advance.
+
 > This is done automatically with the automated installation script.
 
 ```text
@@ -127,75 +92,73 @@ COOLIFY_WHITE_LABELED_ICON=
 COOLIFY_AUTO_UPDATE=false
 ```
 
-| Variable              | Explanation                                                                              |
-| --------------------- | ---------------------------------------------------------------------------------------- |
-| COOLIFY_APP_ID        | A random UUID. Used to differentiate between installed instances.                        |
-| COOLIFY_SECRET_KEY    | Used to encrypt all kinds of private data. **Must be `32` characters long**.              |
-| COOLIFY_DATABASE_URL  | SQLite database URL. **Must be under `../db`** .                                         |
-| COOLIFY_SENTRY_DSN    | Sentry error report DSN. Not mandatory.                                                  |
-| COOLIFY_IS_ON         | Where Coolify is deployed to. Currently, only **`docker`** is supported.                     |
-| COOLIFY_WHITE_LABELED | It removes the "branding" of your Coolify instance. Please get in touch with me before using this. |
-| COOLIFY_WHITE_LABELED_ICON | A remote icon to be replaced on the login/registration page. |
-| COOLIFY_AUTO_UPDATE | It updates your Coolify instance automatically behind the scenes. |
+| Variable                   | Explanation                                                                                        |
+| -------------------------- | -------------------------------------------------------------------------------------------------- |
+| COOLIFY_APP_ID             | A random UUID. Used to differentiate between installed instances.                                  |
+| COOLIFY_SECRET_KEY         | Used to encrypt all kinds of private data. **Must be `32` characters long**.                       |
+| COOLIFY_DATABASE_URL       | SQLite database URL. **Must be under `../db`** .                                                   |
+| COOLIFY_SENTRY_DSN         | Sentry error report DSN. Not mandatory.                                                            |
+| COOLIFY_IS_ON              | Where Coolify is deployed to. Currently, only **`docker`** is supported.                           |
+| COOLIFY_WHITE_LABELED      | It removes the "branding" of your Coolify instance. Please get in touch with me before using this. |
+| COOLIFY_WHITE_LABELED_ICON | A remote icon to be replaced on the login/registration page.                                       |
+| COOLIFY_AUTO_UPDATE        | It updates your Coolify instance automatically behind the scenes.                                  |
 
-## Restart
-
-```bash
-wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./install.sh -r
-```
-
-## Manually Start
+## Options
 
 ```sh
-docker run -tid --env-file .env -v /var/run/docker.sock:/var/run/docker.sock -v coolify-db-sqlite coollabsio/coolify:latest /bin/sh -c "env | grep COOLIFY > .env && docker compose up -d --force-recreate"
+Usage: install.sh [options...]
+    -h, --help                  Show this help menu.
+    -v, --version               Show script version.
+
+    -d, --debug                 Show debug logs during installation.
+    -f, --force                 Force installation.
+
+    -r, --restart               Only restarts Coolify.
+
+    -n, --do-not-track          Opt-out of telemetry. 
+    # You can set export DO_NOT_TRACK=1 in advance.
+
+    -a, --auto-update           Enable auto update feature of Coolify.
+
+    -w, --white-labeled         Install white-labeled version. 
+    # Contact me before using it: https://docs.coollabs.io/contact
+
+    -i, --white-labeled-logo    Custom logo for white-labeled.
+    # Should be a http/https URL.
 ```
-
-Why is this complicated command instead of just a `docker compose up?`
-
-Coolify needs to be started inside docker's namespace.
-
-> In short, it is necessary for the auto-update process.
-
 ## Change Configuration
 
-You can always execute the installation script with different options to reconfigure Coolify.
+You can always execute the installation script with different options to
+reconfigure Coolify.
 
-For example: 
-- If you want to opt-out of tracking, execute the install script with `--do-not-track`.
-- If you want to use the white-labeled version, execute the install script with `--white-labeled`.
+For example:
 
-:::warning
-  Some configurations are not preserved if you would like to change them on an already configured instance. 
-  
-  These options are the following: `--white-labeled`, `--do-no-track`, `--white-labeled-icon`.
-  
-  So if you installed Coolify with `--do-no-track` before, and you want to also use `--white-labeled` option, you need execute the install script with `--do-not-track` and `--white-labeled`!
+- If you want to opt-out of tracking, execute the install script with
+  `--do-not-track`.
+- If you want to use the white-labeled version, execute the install script with
+  `--white-labeled`.
+
+:::warning 
+Some configurations are not preserved if you would like to change them on an already configured instance.
+
+These options are the following: `--white-labeled`, `--do-no-track`, `--white-labeled-icon`.
+
+So if you installed Coolify with `--do-no-track` before, and you want to also use `--white-labeled` option, you need execute the install script with `--do-not-track` and `--white-labeled`! 
 :::
 
-
-## Firewall settings
-
-You need to allow the following ports in your firewall:
-- `80, 443` -> For Coolify Proxy (if you are using it)
-- `3000` -> For Coolify itself `mandatory`
-- `9000-9100` -> For TCP/HTTP on-demand proxies. You can specify different range in the `Settings` menu.
-
-:::warning
-If you are using `Oracle Cloud free ARM server`, you need to allow these ports, otherwise you cannot even reach Coolify itself!
-:::
-
-## Reset Root password
-You need to override the database with the following command:
+## Restart
+If for some reason, your instance crashes, you can restart it with the following command:
 
 ```bash
-docker exec coolify bash -c "sqlite3 /app/db/prod.db 'update User set password=\"RESETME\", updatedAt=`date +%s%N|cut -b1-13` where id=0'"
+wget -q https://get.coollabs.io/coolify/install.sh \ 
+-O install.sh; sudo bash ./install.sh -r
 ```
-This will tag the root user with a password reset flag. Then if you login in the next 10 minutes, your password will be changed to the password you are using to login.
-
 
 ## Uninstall
 
-You can easily uninstall Coolify by stopping the following containers, `coolify`, `coolify-proxy` and `coolify-fluentbit`, or execute the following script:
+You can easily uninstall Coolify by stopping the following containers,
+`coolify`, `coolify-proxy` and `coolify-fluentbit`, or execute the following
+script:
 
 ```bash
 docker stop -t 0 coolify coolify-proxy coolify-fluentbit; docker rm coolify coolify-proxy coolify-fluentbit

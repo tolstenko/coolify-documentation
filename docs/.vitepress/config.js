@@ -16,6 +16,11 @@ export default defineConfig({
       message: "Released under the Apache License.",
       copyright: "Copyright © 2019-present Andras Bacsai",
     },
+    algolia: {
+      appId: '3B2O75UH3P',
+      apiKey: '19522a9a6af41ff19c7c9eb76deb098d',
+      indexName: 'coollabs'
+    },
     socialLinks: [
       { icon: "github", link: "https://github.com/coollabsio" },
       { icon: "twitter", link: "https://twitter.com/andrasbacsai" },
@@ -43,76 +48,72 @@ export default defineConfig({
         {
           text: "Coolify",
           items: [
-            { text: "Get Started", link: "/coolify/" },
+            { text: "Introduction", link: "/coolify/" },
             { text: "Architecture", link: "/coolify/architecture" },
+            { text: "Requirements", link: "/coolify/requirements" },
             { text: "Installation", link: "/coolify/installation" },
+            { text: "Firewall", link: "/coolify/firewall" },
             { text: "Settings", link: "/coolify/settings" },
-            { text: "Users", link: "/coolify/users" },
-            { text: "Teams", link: "/coolify/teams" },
-            { text: "Sources", link: "/coolify/sources" },
-            { text: "Destinations", link: "/coolify/destinations" },
+            { text: "Identity & Access Management", link: "/coolify/iam" },
             {
               text: "Applications", link: "/coolify/applications/",
-              // items: [
-              //   {
-              //     text: "Heroku", link: "/coolify/applications/heroku"
-              //   },
-              //   {
-              //     text: "Static Sites", link: "/coolify/applications/static"
-              //   },
-              //   {
-              //     text: "Deno", link: "/coolify/applications/deno"
-              //   },
-              //   {
-              //     text: "NodeJS", link: "/coolify/applications/nodejs"
-              //   },
-              //   {
-              //     text: "VueJS", link: "/coolify/applications/vuejs"
-              //   },
-              //   {
-              //     text: "NuxtJS", link: "/coolify/applications/nuxtjs"
-              //   },
-              //   {
-              //     text: "NextJS", link: "/coolify/applications/nextjs"
-              //   },
-              //   {
-              //     text: "React/Preact", link: "/coolify/applications/react-preact"
-              //   },
-              //   {
-              //     text: "Gatsby", link: "/coolify/applications/gatsby"
-              //   },
-              //   {
-              //     text: "Svelte", link: "/coolify/applications/svelte"
-              //   },
-              //   {
-              //     text: "PHP", link: "/coolify/applications/php"
-              //   },
-              //   {
-              //     text: "Python", link: "/coolify/applications/python"
-              //   },
-              //   {
-              //     text: "Laravel", link: "/coolify/applications/laravel"
-              //   },
-              //   {
-              //     text: "Rust", link: "/coolify/applications/rust"
-              //   },
-              //   {
-              //     text: "Docker", link: "/coolify/applications/docker"
-              //   },
-              // ]
+              items: [
+                {
+                  text: "Heroku", link: "/coolify/applications/heroku"
+                },
+                {
+                  text: "Static Sites", link: "/coolify/applications/static"
+                },
+                {
+                  text: "Deno", link: "/coolify/applications/deno"
+                },
+                {
+                  text: "NodeJS", link: "/coolify/applications/nodejs"
+                },
+                {
+                  text: "VueJS", link: "/coolify/applications/vuejs"
+                },
+                {
+                  text: "NuxtJS", link: "/coolify/applications/nuxtjs"
+                },
+                {
+                  text: "NextJS", link: "/coolify/applications/nextjs"
+                },
+                {
+                  text: "React/Preact", link: "/coolify/applications/react-preact"
+                },
+                {
+                  text: "Gatsby", link: "/coolify/applications/gatsby"
+                },
+                {
+                  text: "Svelte", link: "/coolify/applications/svelte"
+                },
+                {
+                  text: "PHP", link: "/coolify/applications/php"
+                },
+                {
+                  text: "Python", link: "/coolify/applications/python"
+                },
+                {
+                  text: "Laravel", link: "/coolify/applications/laravel"
+                },
+                {
+                  text: "Rust", link: "/coolify/applications/rust"
+                },
+                {
+                  text: "Docker", link: "/coolify/applications/docker"
+                },
+                {
+                  text: "Docker Compose", link: "/coolify/applications/docker-compose"
+                },
+              ]
             },
             { text: "Databases", link: "/coolify/databases" },
             {
-              text: "Services", link: "/coolify/services/", items: [
-                // {
-                //   text: "Plausible Analytics", link: "/coolify/services/plausible-analytics"
-                // },
-                // {
-                //   text: "WordPress", link: "/coolify/services/wordpress"
-                // },
-              ]
+              text: "Services", link: "/coolify/services"
             },
-            { text: "Secrets", link: "/coolify/secrets" },
+            { text: "Git Sources", link: "/coolify/sources" },
+            { text: "Destinations", link: "/coolify/destinations" },
             { text: "FAQ", link: "/coolify/faq" },
 
           ]
