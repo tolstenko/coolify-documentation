@@ -45,6 +45,12 @@ head:
 
 This section provide details on how to install Coolify.
 
+Before running the install script, please ensure your server has the following packages installed:
+
+- `sudo`
+- `wget`
+- `curl`
+
 ## Scripted
 
 Prompts for answers:
