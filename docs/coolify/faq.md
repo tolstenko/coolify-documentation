@@ -67,7 +67,6 @@ login.
 > If expires, just execute this script again.
 
 ```bash
-docker exec coolify bash -c \ 
-"sqlite3 /app/db/prod.db 'update User set password=\"RESETME\", updatedAt=`date +%s%N|cut -b1-13` where id=0'"
+docker exec coolify bash -c "sqlite3 /app/db/prod.db 'update User set password=\"RESETME\", updatedAt=`date +%s%N|cut -b1-13` where id=0'"
 ```
 
