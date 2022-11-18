@@ -51,8 +51,7 @@ Here is a [detailed blog](https://beaussan.io/blog/coolify-into-existing-traefik
 You can always roll back to a specific Coolify version (for example 3.11.1) with the following command:
 
 ```bash
-wget -q https://get.coollabs.io/coolify/install.sh \
--O install.sh; sudo bash ./install.sh -fx 3.11.1 
+wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./install.sh -fx 3.11.1 
 ```
 
 :::warning
