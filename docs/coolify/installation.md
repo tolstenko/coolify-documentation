@@ -5,13 +5,13 @@ head:
       content: Coolify - Installation
   - - meta
     - name: keywords
-      content: installation coollabs coolify 
+      content: installation coollabs coolify
   - - meta
     - name: twitter:card
       content: summary_large_image
   - - meta
     - name: twitter:site
-      content: '@andrasbacsai'
+      content: "@andrasbacsai"
   - - meta
     - name: twitter:title
       content: Coolify
@@ -66,15 +66,17 @@ No question asked (force):
 wget -q https://get.coollabs.io/coolify/install.sh \
 -O install.sh; sudo bash ./install.sh -f
 ```
+
 Opt-out from telemetry (count installed instances on the [landing page](https://coolify.io))
 
 ```bash
 wget -q https://get.coollabs.io/coolify/install.sh \
 -O install.sh; sudo bash ./install.sh -n
 ```
+
 You can review the script [here](https://github.com/coollabsio/get.coollabs.io/blob/main/static/coolify/install.sh).
 
-## Manually 
+## Manually
 
 1. Need to set the required environment variables in a `.env` file (see
    [below](./installation.md#environment-variables))
@@ -91,23 +93,21 @@ Coolify needs to have the following environment variables to be set in advance.
 COOLIFY_APP_ID=
 COOLIFY_SECRET_KEY=
 COOLIFY_DATABASE_URL=file:../db/prod.db
-COOLIFY_SENTRY_DSN=https://9e7a74326f29422584d2d0bebdc8b7d3@o1082494.ingest.sentry.io/6091062
 COOLIFY_IS_ON=docker
 COOLIFY_WHITE_LABELED=false
 COOLIFY_WHITE_LABELED_ICON=
 COOLIFY_AUTO_UPDATE=false
 ```
 
-| Variable                   | Explanation                                                                                        |
-| -------------------------- | -------------------------------------------------------------------------------------------------- |
-| COOLIFY_APP_ID             | A random UUID. Used to differentiate between installed instances.                                  |
-| COOLIFY_SECRET_KEY         | Used to encrypt all kinds of private data. **Must be `32` characters long**.                       |
-| COOLIFY_DATABASE_URL       | SQLite database URL. **Must be under `../db`** .                                                   |
-| COOLIFY_SENTRY_DSN         | Sentry error report DSN. Not mandatory.                                                            |
-| COOLIFY_IS_ON              | Where Coolify is deployed to. Currently, only **`docker`** is supported.                           |
-| COOLIFY_WHITE_LABELED      | It removes the "branding" of your Coolify instance. Please get in touch with me before using this. |
-| COOLIFY_WHITE_LABELED_ICON | A remote icon to be replaced on the login/registration page.                                       |
-| COOLIFY_AUTO_UPDATE        | It updates your Coolify instance automatically behind the scenes.                                  |
+| Variable                   | Explanation                                                                                                                 |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| COOLIFY_APP_ID             | A random UUID. Used to differentiate between installed instances. Also used to enable/disable telemetry (empty = disabled). |
+| COOLIFY_SECRET_KEY         | Used to encrypt all kinds of private data. **Must be `32` characters long**.                                                |
+| COOLIFY_DATABASE_URL       | SQLite database URL. **Must be under `../db`** .                                                                            |
+| COOLIFY_IS_ON              | Where Coolify is deployed to. Currently, only **`docker`** is supported.                                                    |
+| COOLIFY_WHITE_LABELED      | It removes the "branding" of your Coolify instance. Please get in touch with me before using this.                          |
+| COOLIFY_WHITE_LABELED_ICON | A remote icon to be replaced on the login/registration page.                                                                |
+| COOLIFY_AUTO_UPDATE        | It updates your Coolify instance automatically behind the scenes.                                                           |
 
 ## Options
 
@@ -121,17 +121,18 @@ Usage: install.sh [options...]
 
     -r, --restart               Only restarts Coolify.
 
-    -n, --do-not-track          Opt-out of telemetry. 
+    -n, --do-not-track          Opt-out of telemetry.
     # You can set export DO_NOT_TRACK=1 in advance.
 
     -a, --auto-update           Enable auto update feature of Coolify.
 
-    -w, --white-labeled         Install white-labeled version. 
+    -w, --white-labeled         Install white-labeled version.
     # Contact me before using it: https://docs.coollabs.io/contact
 
     -i, --white-labeled-logo    Custom logo for white-labeled.
     # Should be a http/https URL.
 ```
+
 ## Change Configuration
 
 You can always execute the installation script with different options to
@@ -144,19 +145,20 @@ For example:
 - If you want to use the white-labeled version, execute the install script with
   `--white-labeled`.
 
-:::warning 
+:::warning
 Some configurations are not preserved if you would like to change them on an already configured instance.
 
 These options are the following: `--white-labeled`, `--do-no-track`, `--white-labeled-icon`.
 
-So if you installed Coolify with `--do-no-track` before, and you want to also use `--white-labeled` option, you need execute the install script with `--do-not-track` and `--white-labeled`! 
+So if you installed Coolify with `--do-no-track` before, and you want to also use `--white-labeled` option, you need execute the install script with `--do-not-track` and `--white-labeled`!
 :::
 
 ## Restart
+
 If for some reason, your instance crashes, you can restart it with the following command:
 
 ```bash
-wget -q https://get.coollabs.io/coolify/install.sh \ 
+wget -q https://get.coollabs.io/coolify/install.sh \
 -O install.sh; sudo bash ./install.sh -r
 ```
 
