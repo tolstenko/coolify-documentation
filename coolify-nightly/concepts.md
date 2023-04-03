@@ -41,7 +41,15 @@ head:
       content: https://cdn.coollabs.io/assets/coollabs/og-image-documentation.png
 ---
 
-# Welcome
+# Concepts
 
-This is the nightly build documentation of Coolify v4. What you see here is not finished, could be changed overtime.
+This section provides context on the concepts used on the application.
 
+Let's start with Servers and Destinations.
+
+- Servers. We can manage servers, no matter if it's a standalone docker or swarm.
+  - It's a VPS. There is an IP, user, port, and private key. There can also be a jump server.
+- Destinations. We make operations and automations on destinations. It's basically a network inside the docker engine.
+
+- For Docker Containers, we need both a Server and a Destination.
+- For Kubernetes, we do not manage servers, so they will have only a destination (Kubernetes API) that is separated by namespaces.

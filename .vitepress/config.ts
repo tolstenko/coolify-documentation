@@ -43,7 +43,8 @@ export default defineConfig({
           text: "Coolify v4 (nightly)",
 
           items: [
-            { text: "Concepts", link: "/coolify-nightly/" },
+            { text: "Introduction", link: "/coolify-nightly/" },
+            { text: "Concepts", link: "/coolify-nightly/concepts" },
           ],
         },
         {
