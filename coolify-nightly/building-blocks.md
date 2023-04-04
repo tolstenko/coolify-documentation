@@ -50,7 +50,7 @@ Servers are VPS, baremetal (or even a Raspberry Pi) servers, reachable through S
 
 Projects are the main building blocks. They will group together different environments into a single place.
 
-![D1](/coolify/D1.png)
+<iframe src="https://link.excalidraw.com/readonly/SfP5Gy3PXPi8TqiJmwSY?darkMode=true" width="100%" height="500px" style="border: none;"></iframe>
 
 ## Environments
 
