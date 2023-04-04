@@ -62,8 +62,8 @@ You can make a 1-on-1 clone of an environment or use a fresh one.
 ### 1-on-1 clone
 Like for example, you can clone the `production` environment to `staging` and all resources defined will be cloned with the same configuration. 
 
-::: tip
-Useful if you would like to have a copy of your production resources for testing or integration.
+::: tip Quick Tip
+Useful if you would like to have a copy of your production resources for `testing` or `integration`.
 :::
 
 ### Fresh one
