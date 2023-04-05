@@ -45,7 +45,8 @@ export default defineConfig({
           items: [
             { text: "Introduction", link: "/coolify-nightly/" },
             { text: "Building Blocks", link: "/coolify-nightly/building-blocks" },
-            { text: "Concepts", link: "/coolify-nightly/concepts" },
+            { text: "Configurations", link: "/coolify-nightly/configurations" },
+            // { text: "Concepts", link: "/coolify-nightly/concepts" },
           ],
         },
         {
