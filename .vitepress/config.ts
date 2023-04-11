@@ -32,7 +32,6 @@ export default defineConfig({
       "/": [
         {
           text: "General",
-
           items: [
             { text: "Introduction", link: "/introduction" },
             { text: "Sponsorship", link: "/sponsorship" },
@@ -43,9 +42,9 @@ export default defineConfig({
           text: "Coolify v4 (nightly)",
 
           items: [
-            { text: "Introduction", link: "/coolify-nightly/" },
-            { text: "Building Blocks", link: "/coolify-nightly/building-blocks" },
-            { text: "Configurations", link: "/coolify-nightly/configurations" },
+            { text: "⚠️ Introduction", link: "/coolify-nightly/" },
+            { text: "⚠️ Building Blocks", link: "/coolify-nightly/building-blocks" },
+            { text: "⚠️ Configurations", link: "/coolify-nightly/configurations" },
             // { text: "Concepts", link: "/coolify-nightly/concepts" },
           ],
         },

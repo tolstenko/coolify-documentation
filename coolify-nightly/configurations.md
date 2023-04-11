@@ -41,7 +41,7 @@ head:
       content: https://cdn.coollabs.io/assets/coollabs/og-image-documentation.png
 ---
 
-# Configurations
+# Configurations - WIP
 
 All data that is configured or used by Coolify is available on the host filesystem. If something goes wrong with Coolify, you will be still able to manage your applications.
 

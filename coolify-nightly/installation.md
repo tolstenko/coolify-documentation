@@ -41,5 +41,5 @@ head:
       content: https://cdn.coollabs.io/assets/coollabs/og-image-documentation.png
 ---
 
-# Installation
+# Installation - WIP
 

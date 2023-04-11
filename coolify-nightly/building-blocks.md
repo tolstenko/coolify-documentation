@@ -41,42 +41,53 @@ head:
       content: https://cdn.coollabs.io/assets/coollabs/og-image-documentation.png
 ---
 
-<script setup>
-import { ref } from 'vue'
+# Building Blocks - WIP
 
-const count = ref(0)
-</script>
+## Server
 
-# Building Blocks
+Servers are where all your resources are deployed to. It could be a local server (where Coolify is installed) or any remote server.
 
-The count is: {{ count }}
+### Requirements
 
-<button @click="count++">Increment</button>
+- SSH connectivity between Coolify and the server.
+- SSH key for authentication.
 
-## Servers
-Servers could be a VPS, baremetal, or even a Raspberry Pi, reachable through SSH. These will be managed, configured and monitoried by Coolify.
-This means that some of the system administrator's task are automatically done by Coolify.
+### Actions taken by Coolify
 
-If something happens on your server (server is full), you will get notified via your set notification system (webhook, email, discord, slack, telegram).
+Coolify will automate a few maintenance (system administrator) tasks on the operating system and monitors its resources.
 
-:::tip
-An unusual, but supported use-case for Coolify is to attach your servers into a Coolify instance and they will be monitored, updated periodically etc. You do not need to use other things.
-:::
+You will get notified via the notification system you set(webhook, email, discord, slack, telegram).
 
-## Projects
-If you would like to use Coolify to deploy a few resources, projects is the base building block you will get. It will group together different environments into a single tree structure.
+## Project
+
+Resources are grouped together into a project, a tree structure. A project could have infinite number of resources.
 
 <iframe src="https://link.excalidraw.com/readonly/SfP5Gy3PXPi8TqiJmwSY" width="100%" height="500px" style="border: none;"></iframe>
 
-## Environments
-All projects, by default have a `production` environment, that is not deletable, but renameable.
-Environments consists of resources, like `applications`, `databases` & `services`, etc.
+## Environment
 
-If you make a new enviroment, you could decide if you would like to make a 1-on-1 clone or use a clean one.
+Each project, by default have a `production` environment, that is not deletable, but renameable.
+Environments consists of resources, like [application](#application), [database](#database) or a [service](#service), etc.
 
-### 1-on-1 clone
-Like for example, you can clone the `production` environment to `staging` and all resources defined will be cloned with the same configuration, except domains & environments variables.
+## Application
 
-::: tip Quick Tip
-Useful if you would like to have a copy of your production resources for `testing` or `integration`.
-:::
+An application could be a web application, a static website, a backend API, etc. It is a container that runs a process deployed to a defined [server](#server).
+
+## Database
+
+A database is a container that runs a database process deployed to a defined [server](#server).
+
+## Service
+
+A service is a more complex type of resource, that consists of several other resources, like an [application](#application) and a [database](#database), etc.
+
+Imagine you would like to deploy a Wordpress application, you would need a database, a web server and a PHP runtime. You could create a service that consists of these resources, grouped together and created automatically for you. Each resource in a service could be deployed to a different server.
+
+## Proxy
+A server could have a proxy that is used to route traffic to the right resource. It is not mandatory, but it is recommended to use a proxy.
+
+## Destination
+Destination defines the type of the containerization technology you would like to use. It could be Docker, Docker Swarm or Kubernetes.
+
+## Source
+Source defines the type of the source code repository you would like to use, like Github, Gitlab, Bitbucket, etc.
