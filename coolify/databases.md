@@ -57,7 +57,7 @@ Quickly deploy databases with a few clicks.
 - [Redis](https://redis.io/) -
   [ AMD64](https://hub.docker.com/r/bitnami/redis/)/[ARM](https://hub.docker.com/_/redis/)
 
-To see all the features you could set with envinronment variable, check the base
+To see all the features you could set with environment variables, check the base
 image links!
 
 :::tip 

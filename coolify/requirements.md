@@ -41,7 +41,7 @@ head:
       content: https://cdn.coollabs.io/assets/coollabs/og-image-documentation.png
 ---
 
-# Requirments
+# Requirements
 
 ## Supported Architectures
 

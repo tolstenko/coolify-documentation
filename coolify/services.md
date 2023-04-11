@@ -44,7 +44,7 @@ head:
 
 Services are popular open-sourced and self-hostable applications provided as a service for you.
 
-If you have a new service you would like to add, raise an idea [here](https://feedback.coolify.io/) to get feedback from the community!
+If you have a new service you would like to add, raise an idea [here](https://feedback.coolify.io/) to get feedback from the community or submit a [service template](https://github.com/coollabsio/coolify-community-templates)!
 
 ## Supported Services
 
