@@ -62,7 +62,7 @@ You will get notified via the notification system you set(webhook, email, discor
 
 Resources are grouped together into a project, a tree structure. A project could have infinite number of resources.
 
-<iframe src="https://link.excalidraw.com/readonly/SfP5Gy3PXPi8TqiJmwSY" width="100%" height="500px" style="border: none;"></iframe>
+<iframe src="https://link.excalidraw.com/readonly/DDJvzrOunjuYdYGtBqF6" width="100%" height="500px" style="border: none;"></iframe>
 
 ## Environment
 
