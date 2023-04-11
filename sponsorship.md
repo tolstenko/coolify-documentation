@@ -48,7 +48,7 @@ All of our projects are backed by community over [OpenCollective](https://openco
 
 Yes. We are not backed by any VC, because we would like to be a bootstrapped business. 
 
-The truth is, we already said no to 20+ inquiries, because we believe we can achieve our dreams without it.
+The truth is, we already said no to 30+ inquiries, because we believe we can achieve our dreams without it.
 
 ## How to be financially sustainable?
 All of our projects will be open-source & self-hostable, no matter what. But to be financially sustainable:
