@@ -11,7 +11,7 @@ head:
       content: summary_large_image
   - - meta
     - name: twitter:site
-      content: '@andrasbacsai'
+      content: '@heyandras'
   - - meta
     - name: twitter:title
       content: coolLabs
@@ -44,7 +44,7 @@ head:
 
 You can reach us on the following platforms:
 
-- Twitter: [@andrasbacsai](https://twitter.com/andrasbacsai)
+- Twitter: [@heyandras](https://twitter.com/heyandras)
 - Telegram: [@andrasbacsai](https://t.me/andrasbacsai)
 - Discord: [Invitation](https://coollabs.io/discord)
 - Email: [hi@coollabs.io](mailto:hi@coollabs.io)

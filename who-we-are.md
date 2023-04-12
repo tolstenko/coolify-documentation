@@ -12,7 +12,7 @@ head:
       content: summary_large_image
   - - meta
     - name: twitter:site
-      content: '@andrasbacsai'
+      content: '@heyandras'
   - - meta
     - name: twitter:title
       content: coolLabs
