@@ -143,7 +143,6 @@ export default defineConfig({
         ...mainSideBar(),
         {
           text: "Fonts",
-          collapsed: false,
           items: [
             { text: "Introduction", link: "/fonts/" },
             { text: "Get Started", link: "/fonts/get-started" },
