@@ -40,7 +40,7 @@ head:
     - property: og:image
       content: https://cdn.coollabs.io/assets/coollabs/og-image-services.png
 ---
-# Heroku
+# Ghost
 Based on [Ghost](https://github.com/TryGhost/Ghost).
 
 Ghost is a free and open-source content management system (CMS) and blogging platform. Spin up a Ghost instance within minutes using the Ghost service within Coolify!
