@@ -43,6 +43,10 @@ export default defineConfig({
               text: "⚠️ Configurations",
               link: "/coolify-nightly/configurations",
             },
+            {
+              text: "⚠️ Developer Guide",
+              link: "/coolify-nightly/developer-guide",
+            },
           ],
         },
       ],
