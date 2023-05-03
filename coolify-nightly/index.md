@@ -51,3 +51,5 @@ What you see here is not finished, could be changed overtime.
 [Building blocks](./building-blocks.md)
 
 [Configurations](./configurations.md)
+
+[Developer Guide](./developer-guide.md)
