@@ -61,10 +61,16 @@ First things first, let's define what is a `CoolifyTask`. It's a command (or mul
       - A `Server`: Target where the commands will be run
   - Note: `Pest Arch` must ensure this helper is just called when running in a queue.
 
-### Classes:
+### Understanding Coolify Task
 
-- `PrepareCoolifyTask` (prev: /app/Actions/RemoteProcess/DispatchRemoteProcess.php)
-- `CoolifyTaskArgs` (prev: /app/Data/RemoteProcessArgs.php)
-- `ExecuteCoolifyTask` (prev: /app/Actions/RemoteProcess/RunRemoteProcess.php)
-- `RunRemoteProcess` (currently and will keep: /app/Actions/RemoteProcess/RunRemoteProcess.php)
+- `app/Data/CoolifyTaskArgs.php`
+  The parameters to execute a CoolifyTask, organized in a DTO.
 
+- `app/Actions/CoolifyTask/PrepareCoolifyTask.php`
+  This is where a Coolify Task gets started, with its arguments, and an Activity is created to further monitor/trace.
+
+- `app/Jobs/CoolifyTask.php`
+  This runs in a queue worker, by using a persisted `Activity` with everything needed to run.
+
+- `app/Actions/CoolifyTask/RunRemoteProcess.php`
+  The actual execution, and Activity updates, so that any monitoring/tracing gets updated.
