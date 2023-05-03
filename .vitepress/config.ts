@@ -131,7 +131,13 @@ export default defineConfig({
             { text: "Databases", link: "/coolify/databases" },
             {
               text: "Services",
-              link: "/coolify/services",
+              link: "/coolify/services/",
+              items: [
+                {
+                  text: "Ghost",
+                  link: "/coolify/services/ghost",
+                },
+              ],
             },
             { text: "Git Sources", link: "/coolify/sources" },
             { text: "Destinations", link: "/coolify/destinations" },
