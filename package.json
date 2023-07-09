@@ -9,7 +9,7 @@
   "repository": "https://github.com/coollabsio/documentation.git",
   "license": "Apache",
   "devDependencies": {
-    "vitepress": "1.0.0-alpha.64",
+    "vitepress": "1.0.0-beta.5",
     "vue": "3.2.45"
   },
   "pnpm": {
