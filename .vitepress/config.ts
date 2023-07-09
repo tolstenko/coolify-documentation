@@ -6,7 +6,7 @@ export default defineConfig({
   title: "coolLabs",
   description: "Documentation for all applications & services of coolLabs",
   lastUpdated: true,
-  cleanUrls: true,
+  cleanUrls: false,
   themeConfig: {
     logo: "/icon.png",
     footer: {
