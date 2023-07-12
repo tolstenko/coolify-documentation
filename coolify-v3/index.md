@@ -46,8 +46,6 @@ head:
 
 It's an alternative software to [Heroku](https://www.heroku.com/) and [Netlify](https://www.netlify.com/) and other alternatives out there.
 
-You can try it out before installing it: [Live demo](https://demo.coolify.io/)
-
 
 ## Features
 - Deploy `Static, NodeJS, Svelte, React, Vue, Next, Nuxt, Astro, PHP, Rust, and more` applications hassle-free with automatic reverse proxy and free SSL certificates.
