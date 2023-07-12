@@ -40,7 +40,7 @@ head:
     - property: og:image
       content: https://cdn.coollabs.io/assets/coollabs/og-image-documentation.png
 ---
-# Coolify
+# Coolify (v3)
 
 [Coolify](https://coolify.io) is a self-hostable, all-in-one solution to host your applications, databases, or other open-source services with a few simple clicks.
 

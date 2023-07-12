@@ -41,15 +41,4 @@ head:
       content: https://cdn.coollabs.io/assets/coollabs/og-image-documentation.png
 ---
 
-# Installation
-
-Installation is automated with a single script.
-
-
-```bash
-curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash
-```
-
-:::tip
-You can find the source code on [Github](https://github.com/coollabsio/coolify/blob/main/scripts/install.sh).
-:::
+# Applications

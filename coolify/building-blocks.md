@@ -41,7 +41,7 @@ head:
       content: https://cdn.coollabs.io/assets/coollabs/og-image-documentation.png
 ---
 
-# Building Blocks - WIP
+# Building Blocks
 
 ## Server
 
@@ -84,7 +84,7 @@ A service is a more complex type of resource, that consists of several other res
 Imagine you would like to deploy a Wordpress application, you would need a database, a web server and a PHP runtime. You could create a service that consists of these resources, grouped together and created automatically for you. Each resource in a service could be deployed to a different server.
 
 ## Proxy
-A server could have a proxy that is used to route traffic to the right resource. It is not mandatory, but it is recommended to use a proxy.
+A server could have a proxy that is used to route traffic to the right resource. It is not mandatory, but it is highly recommended to use a proxy.
 
 ## Destination
 Destination defines the type of the containerization technology you would like to use. It could be Docker, Docker Swarm or Kubernetes.

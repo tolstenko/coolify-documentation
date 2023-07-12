@@ -41,9 +41,9 @@ head:
       content: https://cdn.coollabs.io/assets/coollabs/og-image-documentation.png
 ---
 
-# Welcome
+# Coolify (latest)
 
-⚠️ This is the nightly build documentation of Coolify v4. 
+This is the documentation of Coolify v4 beta. 
 
 What you see here is not finished, could be changed overtime. 
 
@@ -52,4 +52,6 @@ What you see here is not finished, could be changed overtime.
 
 [Configurations](./configurations.md)
 
-[Developer Guide](./developer-guide.md)
+[Requirements](./requirements.md)
+
+[Installation](./installation.md)

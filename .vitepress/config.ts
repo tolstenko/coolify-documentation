@@ -35,19 +35,31 @@ export default defineConfig({
         {
           text: "Coolify (latest)",
           items: [
-            { text: "⚠️ Introduction", link: "/coolify/" },
+            { text: "Introduction", link: "/coolify/" },
             {
-              text: "⚠️ Building Blocks",
+              text: "Building Blocks",
               link: "/coolify/building-blocks",
             },
             {
-              text: "⚠️ Configurations",
+              text: "Configurations",
               link: "/coolify/configurations",
             },
             {
-              text: "⚠️ Developer Guide",
-              link: "/coolify/developer-guide",
+              text: "Requirements",
+              link: "/coolify/requirements",
             },
+            {
+              text: "Firewall",
+              link: "/coolify/firewall",
+            },
+            {
+              text: "Installation",
+              link: "/coolify/installation",
+            },
+            // {
+            //   text: "⚠️ Developer Guide",
+            //   link: "/coolify/developer-guide",
+            // },
           ],
         },
       ],

@@ -2,16 +2,16 @@
 head:
   - - meta
     - name: description
-      content: Coolify - Installation
+      content: Coolify
   - - meta
     - name: keywords
-      content: installation coollabs coolify
+      content: coollabs coolify documentation
   - - meta
     - name: twitter:card
       content: summary_large_image
   - - meta
     - name: twitter:site
-      content: "@heyandras"
+      content: '@heyandras'
   - - meta
     - name: twitter:title
       content: Coolify
@@ -40,16 +40,13 @@ head:
     - property: og:image
       content: https://cdn.coollabs.io/assets/coollabs/og-image-documentation.png
 ---
+# Firewall
 
-# Installation
+If you are using any kind of firewall, you need to allow the following ports:
 
-Installation is automated with a single script.
+- For Coolify: `8000` and `22` (or any other SSH port) (required)
+- Reverse Proxy: `80, 443` (optional)
 
-
-```bash
-curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash
-```
-
-:::tip
-You can find the source code on [Github](https://github.com/coollabsio/coolify/blob/main/scripts/install.sh).
+:::warning 
+If you are using `Oracle Cloud free ARM server`, you need to allow these ports inside Oracle's Dashboard, otherwise you cannot reach your instance from the internet after installation.
 :::
