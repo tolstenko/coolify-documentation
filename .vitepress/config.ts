@@ -30,123 +30,123 @@ export default defineConfig({
     nav: [{ text: "Feedback", link: "https://feedback.coolify.io/" }],
     sidebar: {
       "/": mainSideBar(),
-      "/coolify-nightly/": [
+      "/coolify/": [
         ...mainSideBar(),
         {
-          text: "Coolify (nightly)",
+          text: "Coolify (latest)",
           items: [
-            { text: "⚠️ Introduction", link: "/coolify-nightly/" },
+            { text: "⚠️ Introduction", link: "/coolify/" },
             {
               text: "⚠️ Building Blocks",
-              link: "/coolify-nightly/building-blocks",
+              link: "/coolify/building-blocks",
             },
             {
               text: "⚠️ Configurations",
-              link: "/coolify-nightly/configurations",
+              link: "/coolify/configurations",
             },
             {
               text: "⚠️ Developer Guide",
-              link: "/coolify-nightly/developer-guide",
+              link: "/coolify/developer-guide",
             },
           ],
         },
       ],
-      "/coolify/": [
+      "/coolify-v3/": [
         ...mainSideBar(),
         {
           text: "Coolify",
           items: [
-            { text: "Introduction", link: "/coolify/" },
-            { text: "Architecture", link: "/coolify/architecture" },
-            { text: "Requirements", link: "/coolify/requirements" },
-            { text: "Installation", link: "/coolify/installation" },
-            { text: "Firewall", link: "/coolify/firewall" },
-            { text: "Settings", link: "/coolify/settings" },
-            { text: "Identity & Access Management", link: "/coolify/iam" },
+            { text: "Introduction", link: "/coolify-v3/" },
+            { text: "Architecture", link: "/coolify-v3/architecture" },
+            { text: "Requirements", link: "/coolify-v3/requirements" },
+            { text: "Installation", link: "/coolify-v3/installation" },
+            { text: "Firewall", link: "/coolify-v3/firewall" },
+            { text: "Settings", link: "/coolify-v3/settings" },
+            { text: "Identity & Access Management", link: "/coolify-v3/iam" },
             {
               text: "Applications",
-              link: "/coolify/applications/",
+              link: "/coolify-v3/applications/",
               items: [
                 {
                   text: "Heroku",
-                  link: "/coolify/applications/heroku",
+                  link: "/coolify-v3/applications/heroku",
                 },
                 {
                   text: "Static Sites",
-                  link: "/coolify/applications/static",
+                  link: "/coolify-v3/applications/static",
                 },
                 {
                   text: "Deno",
-                  link: "/coolify/applications/deno",
+                  link: "/coolify-v3/applications/deno",
                 },
                 {
                   text: "NodeJS",
-                  link: "/coolify/applications/nodejs",
+                  link: "/coolify-v3/applications/nodejs",
                 },
                 {
                   text: "VueJS",
-                  link: "/coolify/applications/vuejs",
+                  link: "/coolify-v3/applications/vuejs",
                 },
                 {
                   text: "NuxtJS",
-                  link: "/coolify/applications/nuxtjs",
+                  link: "/coolify-v3/applications/nuxtjs",
                 },
                 {
                   text: "NextJS",
-                  link: "/coolify/applications/nextjs",
+                  link: "/coolify-v3/applications/nextjs",
                 },
                 {
                   text: "React/Preact",
-                  link: "/coolify/applications/react-preact",
+                  link: "/coolify-v3/applications/react-preact",
                 },
                 {
                   text: "Gatsby",
-                  link: "/coolify/applications/gatsby",
+                  link: "/coolify-v3/applications/gatsby",
                 },
                 {
                   text: "Svelte",
-                  link: "/coolify/applications/svelte",
+                  link: "/coolify-v3/applications/svelte",
                 },
                 {
                   text: "PHP",
-                  link: "/coolify/applications/php",
+                  link: "/coolify-v3/applications/php",
                 },
                 {
                   text: "Python",
-                  link: "/coolify/applications/python",
+                  link: "/coolify-v3/applications/python",
                 },
                 {
                   text: "Laravel",
-                  link: "/coolify/applications/laravel",
+                  link: "/coolify-v3/applications/laravel",
                 },
                 {
                   text: "Rust",
-                  link: "/coolify/applications/rust",
+                  link: "/coolify-v3/applications/rust",
                 },
                 {
                   text: "Docker",
-                  link: "/coolify/applications/docker",
+                  link: "/coolify-v3/applications/docker",
                 },
                 {
                   text: "Docker Compose",
-                  link: "/coolify/applications/docker-compose",
+                  link: "/coolify-v3/applications/docker-compose",
                 },
               ],
             },
-            { text: "Databases", link: "/coolify/databases" },
+            { text: "Databases", link: "/coolify-v3/databases" },
             {
               text: "Services",
-              link: "/coolify/services/",
+              link: "/coolify-v3/services/",
               items: [
                 {
                   text: "Ghost",
-                  link: "/coolify/services/ghost",
+                  link: "/coolify-v3/services/ghost",
                 },
               ],
             },
-            { text: "Git Sources", link: "/coolify/sources" },
-            { text: "Destinations", link: "/coolify/destinations" },
-            { text: "FAQ", link: "/coolify/faq" },
+            { text: "Git Sources", link: "/coolify-v3/sources" },
+            { text: "Destinations", link: "/coolify-v3/destinations" },
+            { text: "FAQ", link: "/coolify-v3/faq" },
           ],
         },
       ],
@@ -157,6 +157,17 @@ export default defineConfig({
           items: [
             { text: "Introduction", link: "/fonts/" },
             { text: "Get Started", link: "/fonts/get-started" },
+          ],
+        },
+      ],
+      "/safetyper/": [
+        ...mainSideBar(),
+        {
+          text: "SafeTyper",
+          items: [
+            { text: "Introduction", link: "/safetyper/" },
+            { text: "Pricing", link: "/safetyper/pricing" },
+            { text: "License", link: "/safetyper/license" },
           ],
         },
       ],
@@ -177,9 +188,10 @@ function mainSideBar() {
     {
       text: "Products",
       items: [
-        { text: "Coolify", link: "/coolify/" },
-        { text: "Coolify (nightly)", link: "/coolify-nightly/" },
+        { text: "Coolify (latest)", link: "/coolify/" },
+        { text: "Coolify (v3)", link: "/coolify-v3/" },
         { text: "Fonts", link: "/fonts/" },
+        { text: "SafeTyper", link: "/safetyper/" },
       ],
     },
   ];

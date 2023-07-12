@@ -45,6 +45,7 @@ head:
 You can reach us on the following platforms:
 
 - Twitter: [@heyandras](https://twitter.com/heyandras)
+- Mastodon: [@andrasbacsai](https://fosstodon.org/@andrasbacsai)
 - Telegram: [@andrasbacsai](https://t.me/andrasbacsai)
 - Discord: [Invitation](https://coollabs.io/discord)
 - Email: [hi@coollabs.io](mailto:hi@coollabs.io)

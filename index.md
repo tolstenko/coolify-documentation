@@ -10,13 +10,9 @@ hero:
       text: Documentation
       link: /introduction
     - theme: alt
-      text: Coolify v4 (nightly)
-      link: /coolify-nightly/
+      text: Sponsorship
+      link: /sponsorship
     - theme: text
       text: Contact
       link: /contact
-    - theme: brand
-      text: Sponsorship
-      link: /sponsorship
-
 ---
