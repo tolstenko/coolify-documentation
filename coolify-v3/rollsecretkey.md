@@ -60,6 +60,17 @@ If you are upgrading form a version below `v3.12.33`, you will be automatically 
 
 If you are just installing Coolify, you do not need to do anything.
 
+## Force roll secret key
+
+1. Login to your Coolify instance via SSH.
+2. Run the following command: `docker exec -ti coolify bash`. Now you are in the Coolify container.
+3. You will work in the `/app/.env` file. You can edit it with `vi .env`.
+4. Delete `COOLIFY_SECRET_KEY_BETTER`.
+5. Login to your Coolify instance on the web interface.
+6. Go to `Settings` and fill the `Rollback` input field with `3.12.33` (or the latest version - you can check it [here](https://get.coollabs.io/versions.json)) and click on `Rollback`.
+
+If you have any questions, please [contact us](../contact.md).
+
 ## Rollback to old secret key
 
 If you want to rollback to the old secret key, you need to do the followings:
@@ -75,16 +86,5 @@ If you want to rollback to the old secret key, you need to do the followings:
 9. Go to `/app/db` and overwrite the `prod.db` file with the `prod.db_<date` file. `<date>` is the timestamp when you upgraded to `v3.12.33`: `cp prod.db_<date> prod.db`.
 10. Login to your Coolify instance on the web interface.
 11. Go to `Settings` and fill the `Rollback` input field with `3.12.33` (or the latest version - you can check it [here](https://get.coollabs.io/versions.json)) and click on `Rollback`.
-
-If you have any questions, please [contact us](../contact.md).
-
-## Force roll secret key
-
-1. Login to your Coolify instance via SSH.
-2. Run the following command: `docker exec -ti coolify bash`. Now you are in the Coolify container.
-3. You will work in the `/app/.env` file. You can edit it with `vi .env`.
-4. Delete `COOLIFY_SECRET_KEY_BETTER`.
-5. Login to your Coolify instance on the web interface.
-6. Go to `Settings` and fill the `Rollback` input field with `3.12.33` (or the latest version - you can check it [here](https://get.coollabs.io/versions.json)) and click on `Rollback`.
 
 If you have any questions, please [contact us](../contact.md).
