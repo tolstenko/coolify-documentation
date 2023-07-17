@@ -72,6 +72,7 @@ export default defineConfig({
             { text: "Architecture", link: "/coolify-v3/architecture" },
             { text: "Requirements", link: "/coolify-v3/requirements" },
             { text: "Installation", link: "/coolify-v3/installation" },
+            { text: "Roll Secret Key", link: "/coolify-v3/rollsecretkey" },
             { text: "Firewall", link: "/coolify-v3/firewall" },
             { text: "Settings", link: "/coolify-v3/settings" },
             { text: "Identity & Access Management", link: "/coolify-v3/iam" },
