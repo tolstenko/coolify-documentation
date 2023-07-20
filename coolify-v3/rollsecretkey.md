@@ -81,9 +81,17 @@ If you want to rollback to the old secret key, you need to do the followings:
 4. Delete `COOLIFY_SECRET_KEY_BETTER`.
 5. Rename `COOLIFY_SECRET_KEY` to `COOLIFY_SECRET_KEY_OLD`. This OLD secret is the newly generated secret key. Just keep it in case you want to rollback again.
 6. Rename `COOLIFY_SECRET_KEY_OLD_<date>` to `COOLIFY_SECRET_KEY`. `<date>` is the timestamp when you upgraded to `v3.12.33`. This is the old secret key, that you want to rollback to.
+
 7. Create `COOLIFY_SECRET_KEY_BETTER` with the same as `COOLIFY_SECRET_KEY` value, created in step 6.
 8. Save the file: `:wq`.
-9. Go to `/app/db` and overwrite the `prod.db` file with the `prod.db_<date` file. `<date>` is the timestamp when you upgraded to `v3.12.33`: `cp prod.db_<date> prod.db`.
+9. Go to `/app/db` and overwrite the `prod.db` file with the `prod.db_<date` file. `<date>` is the timestamp when you upgraded to `v3.12.33` (the FIRST oldest on by date): `cp prod.db_<date> prod.db`.
+
+```
+-rw-r--r-- 1 root root 831488 Jul 18 10:13 prod.db_1689675186210 (THIS ONE, the date could be different)
+-rw-r--r-- 1 root root 831488 Jul 20 12:14 prod.db_1689855278177
+-rw-r--r-- 1 root root 831488 Jul 20 12:40 prod.db_1689856815356
+```
+
 10. Login to your Coolify instance on the web interface.
 11. Go to `Settings` and fill the `Rollback` input field with `3.12.33` (or the latest version - you can check it [here](https://get.coollabs.io/versions.json)) and click on `Rollback`.
 
