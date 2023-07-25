@@ -130,8 +130,8 @@ Your application will be built and deployed based on any public repositories fro
 
 Examples:
 
-- https://github.com/coollabsio/nodejs-example -> You can choose the branch.
-- https://github.com/coollabsio/nodejs-example/tree/main -> Preselect `main` branch.
+- https://github.com/coollabsio/coolify-examples -> You can choose the branch.
+- https://github.com/coollabsio/coolify-examples/tree/static -> Preselect `static` branch.
 - https://gitlab.com/aleveha/fastify-example -> You can choose the branch.
 - https://gitlab.com/aleveha/fastify-example/-/tree/master -> Preselect `master` branch.
 
