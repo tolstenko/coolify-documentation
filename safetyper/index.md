@@ -1,6 +1,6 @@
 # About
 
-[safeTyper](https://safetyper.coollabs.io) is a Grammarly alternative, where YOU own what you type on your keyboard.
+[safeTyper](https://safetyper.com) is a Grammarly alternative, where YOU own what you type on your keyboard.
 
 ## Who is it for?
 
