@@ -84,7 +84,7 @@ If you want to rollback to the old secret key, you need to do the followings:
 `app/db/prod.db_1689674942980` will be different in your case
 :::
 
-10.  Go to `Settings` and fill the `Rollback` input field with `3.12.36` (or the latest version - you can check it [here](https://get.coollabs.io/versions.json)) and click on `Rollback`.
+10. Reinstall Coolify with: `cd ~ && wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./install.sh -f`
 
 If you have any questions, please [contact us](../contact.md).
 
