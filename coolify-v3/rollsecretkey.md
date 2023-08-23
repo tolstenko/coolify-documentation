@@ -60,6 +60,34 @@ If you are upgrading form a version below `v3.12.33`, you will be automatically 
 
 If you are just installing Coolify, you do not need to do anything.
 
+## Rollback to old secret key
+
+(It also solve this [issue](https://github.com/coollabsio/coolify/issues/1148) related to **secretOrPrivateKey must be an asymmetric key when using RS256** or **Getting 500 error when accessing running services**).
+
+If you want to rollback to the old secret key, you need to do the followings:
+
+1. Login to your Coolify instance via SSH.
+2. Switch to root user (`sudo su -`) and locate your `~/coolify/.env` file. 
+3. In `~/coolify/.env` file there should be a `COOLIFY_SECRET_KEY` environment variable.
+4. Create a `COOLIFY_SECRET_KEY_BETTER` with the same value as `COOLIFY_SECRET_KEY`.
+5. Check your database files with `docker exec coolify ls -l /app/db` command.
+6. There should be at least on with the name of `prod.db` and a few with `prod.db_<date>`.
+7. Locate the oldest one. For example:
+```
+-rw-r--r-- 1 root root 7901184 Aug 23 09:30 prod.db
+-rw-r--r-- 1 root root 7901184 Jul 18 10:09 prod.db_1689674942980 <- THIS (date could be different)
+```
+8. Make a copy of your `prod.db` file: `docker exec coolify cp /app/db/prod.db /app/db/prod.db_$(date +"%Y%m%d%H%M%S")`
+9. Overwrite `prod.db` with the old database file: `docker exec coolify cp /app/db/prod.db_1689674942980 /app/db/prod.db`
+
+::: warning
+`app/db/prod.db_1689674942980` will be different in your case
+:::
+
+10.  Go to `Settings` and fill the `Rollback` input field with `3.12.36` (or the latest version - you can check it [here](https://get.coollabs.io/versions.json)) and click on `Rollback`.
+
+If you have any questions, please [contact us](../contact.md).
+
 ## Force roll secret key
 
 1. Login to your Coolify instance via SSH.
@@ -71,36 +99,3 @@ If you are just installing Coolify, you do not need to do anything.
 
 If you have any questions, please [contact us](../contact.md).
 
-## Rollback to old secret key
-
-(It also solve this [issue](https://github.com/coollabsio/coolify/issues/1148) related to **secretOrPrivateKey must be an asymmetric key when using RS256**).
-
-If you want to rollback to the old secret key, you need to do the followings:
-
-1. Login to your Coolify instance via SSH.
-2. Run the following command: `docker exec -ti coolify bash`. Now you are in the Coolify container.
-3. You will work in the `/app/.env` file. You can edit it with `vi .env`.
-4. Delete `COOLIFY_SECRET_KEY_BETTER`.
-5. Rename `COOLIFY_SECRET_KEY` to `COOLIFY_SECRET_KEY_OLD`. This OLD secret is the newly generated secret key. Just keep it in case you want to rollback again.
-6. Rename `COOLIFY_SECRET_KEY_OLD_<date>` to `COOLIFY_SECRET_KEY`. 
-   
-  `<date>` is the timestamp when you upgraded to `v3.12.33`. This is the old secret key, that you want to rollback to.
-
-7. Create `COOLIFY_SECRET_KEY_BETTER` with the same as `COOLIFY_SECRET_KEY` value, created in step 6.
-8.  Save the file: `:wq`.
-9.  Go to `/app/db` and overwrite the `prod.db` file with the `prod.db_<date` file: `cp prod.db_<date> prod.db`.
-    
-  `<date>` is the timestamp when you upgraded to `v3.12.33`. 
-    
-  Most probably on **Jul 18 2023**.
-
-```
--rw-r--r-- 1 root root 831488 Jul 18 10:13 prod.db_1689675186210 <- THIS (date could be different)
--rw-r--r-- 1 root root 831488 Jul 20 12:14 prod.db_1689855278177
--rw-r--r-- 1 root root 831488 Jul 20 12:40 prod.db_1689856815356
-```
-
-10.  Login to your Coolify instance on the web interface.
-11.  Go to `Settings` and fill the `Rollback` input field with `3.12.33` (or the latest version - you can check it [here](https://get.coollabs.io/versions.json)) and click on `Rollback`.
-
-If you have any questions, please [contact us](../contact.md).
