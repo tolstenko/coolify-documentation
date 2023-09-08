@@ -171,3 +171,15 @@ script:
 ```bash
 docker stop -t 0 coolify coolify-proxy coolify-fluentbit; docker rm coolify coolify-proxy coolify-fluentbit
 ```
+
+You also need to cleanup all the docker volumes as well.
+
+```bash
+docker volume rm coolify-db coolify-letsencrypt coolify-local-backup coolify-logs coolify-ssl-certs coolify-traefik-letsencrypt
+```
+
+And delete all configurations in `~/coolify`:
+
+```bash
+rm -f ~/coolify
+```
