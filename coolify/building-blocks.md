@@ -45,18 +45,58 @@ head:
 
 ## Server
 
-Servers are where all your resources are deployed to. It could be a local server (where Coolify is installed) or any remote server.
+Servers are where all your resources are deployed to. 
+
+### Types
+- **Localhost:** the server where Coolify is installed.
+- **Remote Server:** could be any server, rechable through SSH.
 
 ### Requirements
+#### Localhost
+To be able to manage the server where Coolify is running on, the docker container of Coolify should reach the host server through SSH.
 
-- SSH connectivity between Coolify and the server.
-- SSH key for authentication.
+You can use localhost as a server where all your resources are running, but it is not recommended as high server usage could prevent to use Coolify.
 
-### Actions taken by Coolify
+:::tip
+You can use our [Cloud](app.coolify.io) version, so you only need a server for your resources. You will get a few other things included with the cloud version, like free email notifications, s3 storage, etc based on your subscription plan.
+:::
 
-Coolify will automate a few maintenance (system administrator) tasks on the operating system and monitors its resources.
+   
+#### Remote Server
+Its only purpose to host your resources, not Coolify itself.
 
-You will get notified via the notification system you set(webhook, email, discord, slack, telegram).
+You need the followings on the remote server:
+
+1. Connectivity
+   - SSH connectivity between Coolify and the server with SSH Key Authentication.
+   :::tip
+   Your public key should be added to **root** user's `~/.ssh/authorized_keys`.
+
+   If you do not have an SSH Key, you can generate on through Coolify with a simple button or you can generate one manually.
+   :::
+   - Root user access.
+2. Docker Engine (23+)
+   - Automatically installed from the UI or you can install manually.
+
+The only manual step you need to do is to place your SSH key on the server, into root user's `~/.ssh/authorized_keys` file.
+
+
+
+### Automations & Monitoring
+
+Coolify will automate a few maintenance tasks on the operating system, so you do not need to do them manually.
+
+Coolify monitors your server & your deployed resources and immediately notifies you if something good or bad happens. You will always know what is going on in your self-hosted environment.
+
+All you need to do is to setup your preferred notification system. Currently available:
+- Email
+- Discord Webhooks
+- Telegram Bot
+
+WIP:
+- Webhooks
+- Slack
+
 
 ## Project
 
@@ -73,11 +113,29 @@ Environments consists of resources, like [application](#application), [database]
 
 An application could be a web application, a static website, a backend API, etc. It is a container that runs a process deployed to a defined [server](#server).
 
+### Types
+1. Public or Private Git repository
+   - Private Git repositories could be deployed with a GitHub App, or with [Deploy Key](https://docs.github.com/en/rest/deploy-keys/deploy-keys?apiVersion=2022-11-28) 
+2. Simple Dockerfile
+
+To have full integration with GitHub, like fully automated commit or pull request based deployments, you need a GitHub App (created automatically by Coolify).
+
+
 ## Database
 
-A database is a container that runs a database process deployed to a defined [server](#server).
+All supported databases could have scheduled, automatic backups, that is saved to your server or to an S3 compatible storage.
 
-## Service
+### Types
+- PostgreSQL
+:::tip
+MySQL, MariaDB, MongoDB, etc, coming soon...
+:::
+
+## Service 
+
+:::warning
+Work in progress..,
+:::
 
 A service is a more complex type of resource, that consists of several other resources, like an [application](#application) and a [database](#database), etc.
 
@@ -86,8 +144,24 @@ Imagine you would like to deploy a Wordpress application, you would need a datab
 ## Proxy
 A server could have a proxy that is used to route traffic to the right resource. It is not mandatory, but it is highly recommended to use a proxy.
 
+Coolify uses Traefik at the moment. Configuration done automatically by Coolify in case you deploy a resource that requires this proxy.
+
+Like if you add a domain to your application, Coolify detects it and starts a proxy automatically.
+
+:::tip
+Free SSL certificates included, thanks to Let's Encrypt.
+:::
+
 ## Destination
 Destination defines the type of the containerization technology you would like to use. It could be Docker, Docker Swarm or Kubernetes.
 
+:::tip
+Currently only standalone Docker engine is supported.
+:::
+
 ## Source
 Source defines the type of the source code repository you would like to use, like Github, Gitlab, Bitbucket, etc.
+
+Github & GitLab public source is defined by default, but unseen by the users.
+
+To use private repositories, you need to make a GitHub or GitLab App to have all kinds of integrations available.

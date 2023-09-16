@@ -33,9 +33,13 @@ export default defineConfig({
       "/coolify/": [
         ...mainSideBar(),
         {
-          text: "Coolify (latest)",
+          text: "Coolify",
           items: [
             { text: "Introduction", link: "/coolify/" },
+            {
+              text: "Installation",
+              link: "/coolify/installation",
+            },
             {
               text: "Building Blocks",
               link: "/coolify/building-blocks",
@@ -45,16 +49,8 @@ export default defineConfig({
               link: "/coolify/configurations",
             },
             {
-              text: "Requirements",
-              link: "/coolify/requirements",
-            },
-            {
               text: "Firewall",
               link: "/coolify/firewall",
-            },
-            {
-              text: "Installation",
-              link: "/coolify/installation",
             },
             // {
             //   text: "⚠️ Developer Guide",
@@ -201,7 +197,7 @@ function mainSideBar() {
     {
       text: "Products",
       items: [
-        { text: "Coolify (latest)", link: "/coolify/" },
+        { text: "Coolify", link: "/coolify/" },
         { text: "Coolify (v3)", link: "/coolify-v3/" },
         { text: "Fonts", link: "/fonts/" },
         { text: "SafeTyper", link: "/safetyper/" },
