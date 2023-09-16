@@ -115,7 +115,7 @@ An application could be a web application, a static website, a backend API, etc.
 
 ### Types
 1. Public or Private Git repository
-   - Private Git repositories could be deployed with a GitHub App, or with [Deploy Key](https://docs.github.com/en/rest/deploy-keys/deploy-keys?apiVersion=2022-11-28) 
+   - Private Git repositories could be deployed with a GitHub App, or with [Deploy Key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys) 
 2. Simple Dockerfile
 
 To have full integration with GitHub, like fully automated commit or pull request based deployments, you need a GitHub App (created automatically by Coolify).
