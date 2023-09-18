@@ -104,3 +104,31 @@ Hosting the following things:
 - 2 PostgreSQL databases
 
 
+## Uninstall
+
+
+You can easily uninstall Coolify by stopping the following containers,
+`coolify`, `coolify-proxy` and `coolify-db`, `coolify-redis` or execute the following
+script:
+
+```bash
+docker stop -t 0 coolify coolify-proxy coolify-redis; docker rm coolify coolify-proxy coolify-redis
+```
+
+You also need to cleanup all the docker volumes as well.
+
+```bash
+docker volume rm coolify-db coolify-redis
+```
+
+:::warning
+
+The following command will delete EVERYTING related to your configurations, backups, etc.
+
+:::
+
+And delete all configurations in `/data/coolify`:
+
+```bash
+rm -f /data/coolify
+```
