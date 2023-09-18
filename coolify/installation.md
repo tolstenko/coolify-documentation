@@ -106,7 +106,6 @@ Hosting the following things:
 
 ## Uninstall
 
-
 You can easily uninstall Coolify by stopping the following containers,
 `coolify`, `coolify-proxy` and `coolify-db`, `coolify-redis` or execute the following
 script:
