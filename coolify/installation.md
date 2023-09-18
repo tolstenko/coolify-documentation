@@ -107,11 +107,10 @@ Hosting the following things:
 ## Uninstall
 
 You can easily uninstall Coolify by stopping the following containers,
-`coolify`, `coolify-proxy` and `coolify-db`, `coolify-redis` or execute the following
-script:
+`coolify`,`coolify-db`, `coolify-proxy`, and `coolify-redis` or by executing the following script:
 
 ```bash
-docker stop -t 0 coolify coolify-proxy coolify-redis; docker rm coolify coolify-proxy coolify-redis
+docker stop -t 0 coolify coolify-db coolify-proxy coolify-redis; docker rm coolify coolify-db coolify-proxy coolify-redis
 ```
 
 You also need to cleanup all the docker volumes as well.
