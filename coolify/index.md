@@ -50,7 +50,7 @@ This is the documentation of Coolify v4 beta. What you see here is not finished,
 ## What is Coolify?
 Coolify is an all-in one PaaS that helps you to self-host your own applications, databases or services (like Wordpress, Plausible Analytics, Ghost) without managing your servers, also known as an open-source & self-hostable Heroku / Netlify alternative.
 
-Looking for the hosted cloud & paid version? [Here you go.](app.coolify.io)
+Looking for the hosted cloud & paid version? [Here you go.](https://app.coolify.io)
 
 ## Features
 - **BYOS:** Bring your own server from any cloud providers, or even your own server at home! All you need is SSH access. You will have full control over your server, and you can even use it for other purposes.

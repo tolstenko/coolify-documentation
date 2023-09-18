@@ -58,7 +58,7 @@ To be able to manage the server where Coolify is running on, the docker containe
 You can use localhost as a server where all your resources are running, but it is not recommended as high server usage could prevent to use Coolify.
 
 :::tip
-You can use our [Cloud](app.coolify.io) version, so you only need a server for your resources. You will get a few other things included with the cloud version, like free email notifications, s3 storage, etc based on your subscription plan.
+You can use our [Cloud](https://app.coolify.io) version, so you only need a server for your resources. You will get a few other things included with the cloud version, like free email notifications, s3 storage, etc based on your subscription plan.
 :::
 
    
