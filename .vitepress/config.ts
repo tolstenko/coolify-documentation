@@ -197,7 +197,7 @@ function mainSideBar() {
     {
       text: "Products",
       items: [
-        { text: "Coolify", link: "/coolify/" },
+        { text: "Coolify", link: "https://coolify.io/docs" },
         { text: "Coolify (v3)", link: "/coolify-v3/" },
         { text: "Fonts", link: "/fonts/" },
         { text: "SafeTyper", link: "/safetyper/" },
