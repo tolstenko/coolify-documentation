@@ -62,7 +62,7 @@ image links!
 
 :::tip 
 If you have a new database you would like to add, raise an idea
-[here](https://feedback.coolify.io/) to get feedback from the community! 
+[here](https://github.com/orgs/coollabsio/discussions) to get feedback from the community! 
 :::
 
 ## Features

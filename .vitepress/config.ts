@@ -27,7 +27,7 @@ export default defineConfig({
       pattern:
         "https://github.com/coollabsio/documentation/edit/main/docs/:path",
     },
-    nav: [{ text: "Feedback", link: "https://feedback.coolify.io/" }],
+    nav: [{ text: "Feedback", link: "https://github.com/orgs/coollabsio/discussions" }],
     sidebar: {
       "/": mainSideBar(),
       "/coolify/": [

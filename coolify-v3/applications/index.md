@@ -49,7 +49,7 @@ Coolify not just builds but also configures a reverse proxy (Traefik) automatica
 
 You just need to push your code!
 
-If you have a new build pack you would like to add, raise an idea [here](https://feedback.coolify.io/) to get feedback from the community!
+If you have a new build pack you would like to add, raise an idea [here](https://github.com/orgs/coollabsio/discussions) to get feedback from the community!
 
 ## Supported Applications
 

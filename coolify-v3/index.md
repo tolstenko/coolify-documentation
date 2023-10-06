@@ -68,6 +68,6 @@ It's an alternative software to [Heroku](https://www.heroku.com/) and [Netlify](
 Lots of people and companies using it daily: [examples](https://github.com/coollabsio/coolify/issues/399)
 
 ## Feedback
-If you have a new service / build pack you would like to add, raise an idea [here](https://feedback.coolify.io/) to get feedback from the community!
+If you have a new service / build pack you would like to add, raise an idea [here](https://github.com/orgs/coollabsio/discussions) to get feedback from the community!
 
 
