@@ -73,7 +73,7 @@ You can set up email service for Ghost by using enviroment variables. Specify th
 4. mail__options__port - The SMTP port to use, get this from your mail provider
 5. mail__options__secureConnection - true if using HTTPS
 6. mail__options__auth__user - SMTP username, get this from your mail provider
-7. mail__options__auth__password - Password for the SMTP username, get this from your mail provider
+7. mail__options__auth__pass - Password for the SMTP username, get this from your mail provider
 
 Save the secrets and redeploy your Ghost instance. You should now be able to send emails using Ghost!
 
